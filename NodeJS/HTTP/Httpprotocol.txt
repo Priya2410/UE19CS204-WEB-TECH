@@ -1,0 +1,36 @@
+Purpose of HTTP
+>Hyper Text Transfer Protocol
+    Allows web based applications to communicate and exchange data
+    Its the messenger of the web
+    HTTP is used to deliver content
+    HTTP is the TCP/IP based Protocol
+    Connection less Protocol(Client - disconnects when response is done)
+    HTTP can deliver any sort of data
+    HTTP is stateless(Client and Server only each other during requests)
+>Request-Response Cycle
+    Client makes an request-HTTP message-Web Server-Response-Computers disconnect
+>HTTP message   
+    
+
+
+
+
+Difference between get and post:
+    GET:
+    ITS THE DEFAULT METHOD
+    GET PARAMETERS INCLUDED IN THE URL
+    USED FOR FETCHING DOCUMENTS
+    HAVE A MAXIMUM LENGTH(limited)
+    THEY DONT CHANGE THE SERVER
+    FOR SIMPLE REQUESTS
+    EX:SEARCHING SOMETHING IN GOOGLE
+
+
+
+    POST:
+    POST PARAMETERS ARE INCLUDED IN THE BODY
+    USED FOR UPDATING DATA IN SERVER
+    HAVE NO MAXIMUM LENGTH(not limited)
+    THEY DO CHANGE THE SERVER
+    FOR LITTLE COMPLEX REQUESTS
+    EX:BANK DEATILS USERNAME,PASSWORD

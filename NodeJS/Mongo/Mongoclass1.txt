@@ -1,0 +1,50 @@
+show dbs  //To show the database
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+
+> use newdb; //Creating a new data base
+db.createCollection("student");
+{ "ok" : 1 }
+
+//To insert the data into the data base in json format
+> db.student.insert({name:"Priya",srn:"123",yoa:"2019"}) //Inserting in the database
+WriteResult({ "nInserted" : 1 })
+> db.student.insert({name:"Priyansh",srn:"1234",hostel:"yes",yoa:"2019"})
+WriteResult({ "nInserted" : 1 })
+
+//To display the content of the database
+> db.student.find() //Will give you all the documents within the connection
+{ "_id" : ObjectId("5fa0c6bc7f352718f89cf961"), "name" : "Priya", "srn" : "123", "yoa" : "2019" }
+{ "_id" : ObjectId("5fa0c6fc7f352718f89cf962"), "name" : "Priyansh", "srn" : "1234", "hostel" : "yes", "yoa" : "2019" }
+{ "_id" : ObjectId("5fa0c75b7f352718f89cf963"), "name" : "Parth", "srn" : "12345", "hostel" : "yes", "section" : "A", "yoa" : "2020" }
+ 
+db.student.find({name:"Priya"}) //Find based on name 
+{ "_id" : ObjectId("5fa0c6bc7f352718f89cf961"), "name" : "Priya", "srn" : "123", "yoa" : "2019" }
+
+> db.student.find({srn:"1234"}) //Find based on srn
+{ "_id" : ObjectId("5fa0c6fc7f352718f89cf962"), "name" : "Priyansh", "srn" : "1234", "hostel" : "yes", "yoa" : "2019" }
+
+db.student.remove({name:"Priyansh"}) //To remove the data where name=Priyansh
+WriteResult({ "nRemoved" : 1 })
+> db.student.find()
+{ "_id" : ObjectId("5fa0c6bc7f352718f89cf961"), "name" : "Priya", "srn" : "123", "yoa" : "2019" }
+{ "_id" : ObjectId("5fa0c75b7f352718f89cf963"), "name" : "Parth", "srn" : "12345", "hostel" : "yes", "section" : "A", "yoa" : "2020" }
+
+//To drop the entire database
+db.student.drop()
+true
+
+> db.student.find() 
+//We see its dropped
+
+> db.student.insert({name:"Neeta",section:"E"})
+WriteResult({ "nInserted" : 1 })
+> db.student.find()
+{ "_id" : ObjectId("5fa0ca4d7f352718f89cf965"), "name" : "Neeta", "section" : "E" }
+
+//To update the data
+db.student.update({name:"Neeta"},{name:"Neeta",srn:"1234",hostel:"yes",section:"E"})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.student.find()
+{ "_id" : ObjectId("5fa0ca4d7f352718f89cf965"), "name" : "Neeta", "srn" : "1234", "hostel" : "yes", "section" : "E" }

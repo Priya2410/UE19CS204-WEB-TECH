@@ -1,0 +1,10 @@
+Node JS is a single threaded application.
+To mainatin concurrency it uses events and callbacks.
+Node JS has async functions that use async callbacks.
+Instead of waiting for the response from the server the requests are present in the event queue.
+As soon as we receive the response an event is triggered and a handler is called.
+
+The functions that listen to events are called as observers.
+.on()
+.emit()
+

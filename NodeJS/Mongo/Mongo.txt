@@ -1,0 +1,14 @@
+MongoDB is a No SQL Database.
+It is built keeping in mind scability and developer agility.
+The data doesnt follow a specific schema.
+The data is stored in JSON format.
+
+Different operations
+1)Creating database 
+2)Creating a collection in database
+3)Finding a particular onject/data
+4)Updating data
+5)Deleting data
+6)Inserting data
+
+

@@ -1,0 +1,32 @@
+What is a Buffer ?
+
+Buffer is area of memory
+Here data is stored in the form of array of integers.
+This data is present/memory is allocated outside the V8 Heap.
+Node.js has a Buffer class which is global and need not be imported it can be used to store our data in array of integers.
+
+Different functions:
+1)Buffer.alloc()
+2)Buffer.from()
+3)Buffer1.compare(Buffer2);
+4)Buffer.concat([list],totallength)
+5)Buffer.toString()
+6)Buffer1.copy(Buffer2)
+
+What is a stream?
+
+Stream helps us to process our data in chunks rather than processing at once(in case of a large file).
+Streams provide time and memory efficiency
+Types of streams:
+1)Readable
+2)Writeable
+3)Transform
+4)Duplex
+
+Certain Event Emitters
+
+1)data - triggered when data is ready to be read/write
+2)end - when there is no data left to be processed
+3)finish - when a process is over
+4)error - when an error occurs
+
