@@ -1,0 +1,97 @@
+.Web framework for Node JS
+.Express is a framework for JS
+.Flexible
+.Modules can be directly plugged onto to the Express to built Express
+What is ExpressJS?
+.fast,unopinionated,minimalist web framework for NodeJS.
+.Web application framework.
+.It is used for server side or back end development.
+
+ExpressJS:
+->Has full control over request and response objects.
+->Used for server rendered apps and also API's
+
+MERN vs MEAN
+.MongoDB : No SQL Database,document oriented used to store application data .
+.ExpressJS - fast,unopinionated,minimalist web framework for NodeJS
+.React - JS library to build user interfaces
+.NodeJS-Open source JS run time environment built on chrome's V8 Engine.
+
+During the client-server request-response cycle 
+We can perform the CRUD Operations:
+1)Create   GET
+2)Read     POST
+3)Update   PUT
+4)Delete   DELETE
+GET : Used to get the object represenation,only used to retrieve data.
+POST : Add an object to the resource idenitified by the URI.
+PUT : Used to update an object in the resource idenitified by the URI.
+DELETE: Used to delete an object.
+
+Different modules which we can use :
+1)Body Parser - used to handle data like JSON,Raw ,Text ,URL Encoded form of data.
+2)Multer - used to handle form data
+3)Pug - is a language used to write HTML Templates.
+4)Mongoose - is a client API for Node.js which is used to connect the data base to the ExpressJS.
+5)Cookie Parser - used to parse the cookie header and populate req.cookies with an object keyed by the cookie names.
+
+What is a web service ?
+A web service is the service on the web,it used to hide the complexities of the internal system.
+service here implies service oriented architecture,it is used to serve multiple applications
+Website -> Humans
+Webservice -> Applications
+
+Why web services?
+.Flexible
+.Adaptable
+.Interoperable
+.Platform independent
+.Inexpensive
+.Machine to Machine interaction.
+
+W3C Defintion : a software that is used to support interoperable machine to machine interaction over a network.
+
+REST API:
+Representational State Transfer.
+Client server application and also the modifying resources.
+It is a protocol.
+Simple,interoperable,Flexible.
+Based on a resource oriented architecture:
+Multiple web pages in a application,the user can traverse via clicking links.
+State of a resource : request/reponse.
+When a client traverses a link - to go to another page it is called transfer state.
+CRUD Operations can be performed.
+
+HTTP METHODS :
+1)GET  to get some data from the server
+Ex GET /api/customers
+Certain customers also using their id GET api/customers/1
+
+2)POST to add in data 
+Ex POST /api/customers
+    {name:'Priya',college:'PES'}
+
+3)PUT - used to update data
+Ex PUT /api/customers/1
+{name:'Riya'}
+
+4)DELETE - used to delete data
+Ex DELETE /api/customers 
+   DELETE api/customers/1
+//If we dont want the server to restart the server again and again we can use the nodemon module
+
+Middlewares:
+They have access to request and response objects.
+They are called in between the request , response cycle.
+The next() calls the next middleware in line.
+They are executed in a sequence.
+Middlewares can be used during authentication if the client sends the correct input or data then the data is sent to the server
+else the middleware can handle it.
+app.use() this mounts the middleware it is called everytime during a request-response cycle.
+
+Router:
+app.METHOD(Path,Handler)
+here Method can be get,post,put,update,delete
+Path is the route to the server web page.
+Handler is executed when the route is found
+
