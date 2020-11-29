@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Summer Course Registration</title>
+    </head>
+    <body>
+        <form method="post" action="register.php" target="_blank">
+            <label for="sname">Student Name</label>
+            <input type="text" id="sname" name="studname" />
+            <br><br>
+            <label for="srn">SRN</label>
+            <input type="text" id="srn" name="srn" />
+            <br><br>
+            <label for="dept">Department</label>
+            <select name="dept" id="dept">
+                <option value="CS">Computer Science</option>
+                <option value="ECE">Electronics</option>
+                <option value="MECH">Mechanical</option>
+            </select>
+            <br><br>
+            <label for="course">Course List</label>
+            <input type="checkbox" name="course" value="DDCO">Digital Design</input>
+            <input type="checkbox" name="course" value="DSA">Data Structures</input>
+            <br><br>
+            <input type="checkbox" name="course" value="SDS">Data Science</input>
+            <input type="checkbox" name="course" value="WEB">Web Tech</input>
+            <br><br>
+            <lable for="mode">Mode of Study</lable>
+            <input type="radio" id="mode" name="mode" value="Offline">Offline
+            <input type="radio" id="mode" name="mode" value="Online">Online
+            <br><br>
+            <label for="expectations">Expectations</label>
+            <textarea rows="5" cols="10" id="expectations" name="expectations"></textarea>
+            <br><br>
+            <input type="submit">
+            <input type="reset">
+        </form>
+    </body>
+</html>
