@@ -22,4 +22,6 @@ background: color,image,repeat,position */
 /*
 border-width
 border-style:solid,dashed,dotted,double
-border-radius */
+border-radius 
+border-right-style,border-left-style,border-top-style,border-bottom-style
+*/
