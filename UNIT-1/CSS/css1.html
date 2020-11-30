@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Example</title>
+        <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+        <!-- Embedded Styling -->
+        <style>
+            p{
+                background-color:coral;
+                text-align:center;
+                color:white;
+            }
+            /* Selecting by id */
+            #myid {
+                text-transform: uppercase;
+            }
+            /* Selecting by class */
+            .header{
+                text-align: right;
+                color:red;
+            }
+            /* Selecting multiple */
+            h3,h4,h5
+            {
+                text-transform: uppercase;
+            }
+            *{
+                font-size:30;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Hi,this is a styled paragraph</p>
+        <div id="myid">Hi this is a ID selector</div>
+        <h1 class="header">Hi</h1>
+        <h2 class="header">Hello</h2>
+        <h3>Welcome</h3>
+        <h4 style="color:cornflowerblue">to</h4>
+        <h5>PES</h5>
+    </body>
+</html>

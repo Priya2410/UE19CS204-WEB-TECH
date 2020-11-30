@@ -1,0 +1,25 @@
+body{
+    background-image: url("../HTML/priya.jpeg");
+    background-repeat: no-repeat;
+    background-position:right;
+}
+p{
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+/* background:
+background-color 
+background-image:url("");
+background-repeat:no-repeat,repeat-x,repeat-y
+background-position:right,left,top,bottom 
+background-attachment:fixed,scroll
+*/
+
+/* SHORTHAND 
+background: color,image,repeat,position */
+
+/*
+border-width
+border-style:solid,dashed,dotted,double
+border-radius */
