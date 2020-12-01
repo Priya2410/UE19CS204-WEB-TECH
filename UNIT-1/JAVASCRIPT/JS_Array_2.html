@@ -1,0 +1,28 @@
+<!--Array Obejct - Predifined methods
+
+Add an item to the end of an Array - push()
+Remove an item from the end of an Array -pop()
+Remove an item from the beginning of an Array- shift()
+Add an item to the beginning of an Array - unshift()
+Find the index of an item in the Array - indexOf()
+Remove an item by index position -splice()
+-->
+<script>
+let fruits = ['Apple', 'Banana'];
+document.write(fruits.length+"<br>"); // 2
+document.write(fruits[2]+"<br>"); // undefined
+document.write(fruits[fruits.length - 1]+"<br>"); // Banana
+fruits.push('Orange') // add to the end
+//document.write(fruits.length+"<br>"); // 3
+fruits.pop() // remove Orange (from the end)
+fruits.shift() // remove Apple from the front
+
+document.write(fruits.length+"<br>"); // 1
+fruits.push('Kiwi') // add to the end
+fruits.unshift('Strawberry') // add to the front
+fruits.indexOf('Banana') // 1
+
+for(var i=0;i<fruits.length;i++)								// using for loop
+	document.write(fruits[i]+"<br>");
+
+</script>
