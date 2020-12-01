@@ -1,0 +1,23 @@
+<script>
+// Write a function add that takes variable number of integer arguments and returns the sum of the argument values passed.
+function add(...args){
+    var sum=0;
+    for(i=0;i<args.length;i++)
+    {
+        sum=sum+args[i];
+    }
+    console.log(sum)
+}
+add(1,2,3,4);
+
+
+function reverse(...args)
+{
+    for(j=args.length-1;j>=0;j--)
+    {
+        console.log(args[j]);
+    }
+}
+reverse("priya","mohata","amazing")
+</script>
+

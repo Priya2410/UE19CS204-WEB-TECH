@@ -1,0 +1,17 @@
+<script>
+    function Employee(name)
+    {
+        this.name=name;
+    }
+    Employee.prototype.getName=function(){console.log(this.name)}
+    Employee.prototype.getInfo=function(){console.log('Yes inheritance is working')}
+    var emp1=new Employee('John')
+    function peremployee(sal)
+    {
+        this.sal=sal;
+    }
+    peremployee.prototype=emp1;
+    var per1=new peremployee(10000);
+    per1.getName();
+    per1.getInfo();
+</script>

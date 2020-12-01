@@ -1,0 +1,35 @@
+<script>
+    //Contructor
+    // function Employee(firstname,lastname)
+    // {
+    //     this.firstname=firstname;
+    //     this.lastname=lastname;
+    //     this.display=function(){
+    //         console.log(this.firstname+" "+this.lastname);
+    //     }
+    // }
+    // let emp1=new Employee('Priya','Mohata');
+    // emp1.display();
+
+    // var student={
+    //     first:'Priya',
+    //     last:'Mohata',
+    //     display:function()
+    //     {
+    //         console.log(this.first+" "+this.last);
+    //     }
+    // }
+    // student.display()
+
+    function employee(firstname,lastname)
+    {
+        this.firstname=firstname;
+        this.lastname=lastname;
+    }
+    employee.prototype.display=function()
+    {
+        console.log(this.firstname+" "+this.lastname);
+    }
+    var emp2=new employee('Parth','Mohata');
+    emp2.display();
+</script>

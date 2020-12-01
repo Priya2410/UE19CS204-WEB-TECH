@@ -1,0 +1,14 @@
+<script>
+    var employee=
+    {
+        getName:function()
+        {
+            console.log(this.name);
+        }
+    }
+    var stud1={name:'Priya'}
+    employee.getName.call(stud1);
+
+    var student={show:function(){console.log('Hi '+this.name)}}
+    student.show.call(stud1);
+</script>

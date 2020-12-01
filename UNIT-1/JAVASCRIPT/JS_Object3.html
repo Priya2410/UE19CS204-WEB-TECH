@@ -1,0 +1,13 @@
+<script>
+function employee(firstname,lastname)
+{
+    this.firstname=firstname;
+    this.lastname=lastname;
+}
+employee.prototype.display=function()
+{
+    console.log(this.firstname+" "+this.lastname);
+}
+var emp2=new employee('Parth','Mohata');
+emp2.display();
+</script>

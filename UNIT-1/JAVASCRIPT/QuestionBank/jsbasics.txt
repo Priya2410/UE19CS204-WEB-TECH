@@ -1,0 +1,24 @@
+What are the primitive datatypes available in Javascript?
+The primitive data types in JS are number,string,boolean,null and undefined
+
+ With a proper example explain what is special about the “+” operator in Javascript?
+ This operator can be used both for concatenation and addition
+ Ex 5+5=10
+ '5'+'5'='55'
+
+With an example, explain the difference between == and === operators.
+== is used for comparsions of only the values and not the data types
+while === is used to compare the type as well as the value
+
+Given numstr = "456"; Convert this string into a number -
+Using mathematical operators
+"456"-"0"
+Using an inbuilt Javascript utility function parseInt(numstr)
+***Using an inbuilt Javascript constructor function
+
+What is the output for the following snippets?
+var num = 123.789;
+num2 = parseInt( num ); //123
+**num3 = parseInt( num, 8);//173 (octal)
+
+document.write(num2 + “:::” + num3);

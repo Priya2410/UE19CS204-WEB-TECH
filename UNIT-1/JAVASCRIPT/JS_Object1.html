@@ -1,0 +1,39 @@
+<script>
+    // Two ways to create JS Objects
+    // 1.Literal Way directly declaring the object
+    //Disadvantage - we can create only one object at a time
+    // let item=
+    // {
+    //     name:'Reebok',
+    //     price:3000,
+    //     color:'black',
+    //     quantity:20,
+    //     show:function()
+    //     {
+    //         document.write(item.name+" "+item.price+" "+item.quantity+"<br>");
+    //         document.write(this.name+" "+this.price+" "+this.quantity);
+    //     }
+    // }
+    // item.show()
+    //2.Constructor Method
+    function item(name,price,quantity)
+    {
+        this.name=name
+        this.price=price
+        this.quantity=quantity
+        // this.show=function(){
+        //     document.write(this.name+" "+this.price+" "+this.quantity);
+        // }
+    }
+    let item1=new item('Nike',2000,3)
+    let item2=new item('Reebook',2000,3)
+    //Every item will have its own copy of show as a result it occupies more space
+    //so we use prototype
+    item.prototype.show=function()
+    {
+        document.write(this.name+" "+this.price+" "+this.quantity);
+    }
+    item2.show();
+    item1.show()
+
+</script>

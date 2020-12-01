@@ -1,0 +1,29 @@
+<!-- Write a JavaScript function calc() that takes the first parameter as the operation to be performed and one or more operands as the other parameters. The first argument should be treated as a function reference that appropriately calls the function to perform the actual operation. That is, there should be multiple functions for each operation (like add, increment etc.). -->
+<script>
+    function add(a,b){console.log (a+b)}
+    function sub(a,b){console.log (a-b)}
+    function mul(a,b){console.log (a*b)}
+    function div(a,b){console.log (a/b)}
+    function calc(op,a,b){
+        if(op==add)
+        {
+            add(a,b)
+        }
+        if(op==sub)
+        {
+            sub(a,b)
+        }
+        if(op==mul)
+        {
+            mul(a,b)
+        }
+        if(op==div)
+        {
+            div(a,b)
+        }
+    }
+    calc(add,9,8)
+    calc(sub,10,4)
+    calc(mul,7,6)
+    calc(div,81,3)
+</script>

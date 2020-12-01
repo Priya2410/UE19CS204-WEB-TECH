@@ -1,0 +1,32 @@
+Explain the concept of variable and function hoisting. What is the output of the following code?
+var salary = “1000$”
+
+function giveHike() {
+            console.log (“Original salary was” + salary); //undefined 
+            var salary = “2000$”
+            console.log (“My new salary is” + salary); //2000
+
+}
+
+function myfunc(x,y){
+return x + y;
+}
+console.log (myfunc(10)); //NaN
+console.log (myfunc(10,20,30));//30
+
+var x = 100;
+function hoist() {
+  // A condition that should not affect the outcome of the code
+  if (false) {
+    var x = 200;
+  }
+  console.log(x); //undefined
+}
+hoist ();
+
+
+What is the output of the following code? Will it result in an error or show some output?
+var a = [1,2,3];
+a[10] = 6; // a[1,2,3,empty*7,6]
+console.log (a.length + a[6]); // 11+empty = NaN
+

@@ -1,0 +1,11 @@
+<script>
+    let item={name:"Reebok",price:2000,quantity:2};
+    let item1=Object.create(item);
+    item1.name='Nike';
+    console.log(item1.name) // Any change in item1 doesnt change item 
+    console.log(item.name)
+
+    let item2=Object.create(item,{name:{value:'Nike'}},{price:{value:2000}},{quantity:{value:0}})
+    console.log(item2.quantity)
+    //item1 is the copy of item
+</script>
