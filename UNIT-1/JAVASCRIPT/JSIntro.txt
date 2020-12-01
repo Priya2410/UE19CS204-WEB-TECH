@@ -1,0 +1,80 @@
+Client Side Scripting Language
+Browser can directly show the ouput not necessary to have a server to process the code
+Pros:
+Allows dynamic HTML pages
+Complete web pages
+Browser can respond more rapidly to user events
+
+Cons:
+Requires a JS Enabled Browser
+What works one on one browser may generate an error on the other
+Can cause security problems.
+
+Use the <script> tag for embedding JS in HTML
+<script type='text/javascript'>
+
+The script must be placed in the head sometimes or sometimes in the body.
+
+HTML used to define the content of the webpage
+CSS used to define the layout of the webpage
+JS used to make the web pages dynamic
+
+Client->Request->Server->Response
+
+The server will give the page to the browser it doesnt process it
+The browser will process the web page and the output is shown on the browser
+The processing happens at the client Side hence client side Scripting
+
+Comments in JS 
+// Single Line
+/* */ Multi line
+
+Semicolon isnt necessary in JS
+
+Variable Declaration:
+No data types
+first character can only be $,_,A-Z,a-Z
+Then it can have 0-9,A-Z,a-z,$,_
+Variable names are case sensitive
+
+Variable can be declared by 
+let(block scope) cant be redeclared 
+var(function or global scope) 
+const(block scope) cant be reassigned 
+
+Primitive Data Types: // not keywords
+number
+String
+boolean
+null
+undefined
+
+//They are classes 
+Non Primitive (used with new keyword)
+Object
+Number 
+String 
+Date
+Array 
+(All begin with a uppercase letter)
+
+In JS everything is a Object
+
+Object is a real world entity has a state and behaviour
+
+javascript operators
+Arithmetic +,-,*,/,%
+Assignment =,+=,-=,%=,*=.--
+Logical ||,&&,!
+Comparison >,<,>=,<=,==,=== (checks for type and value),!==,!=
+
++ can add at concatenation operator Also
+
+Constructs : if,if-else,while,for,switch,do while
+
+var x="5"+"5"  // "55"
+var x=5+5 // 10
+var x="5"+5 // "55"
+
+
+

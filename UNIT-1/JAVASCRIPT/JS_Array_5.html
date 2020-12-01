@@ -1,0 +1,30 @@
+<script>
+var arr=["a","apple",23,true,"ab"];
+console.log(arr.length); //5
+var arr1= new Array(10);
+console.log(arr1.length); //10
+var arr2=new Array(10,20); 
+console.log(arr2.length); //2
+console.log(arr1); //empty * 10
+var arr3=new Array(400);
+arr3[100]=50;
+arr3[250]=45;
+arr3[350]=70;
+console.log(arr3.length); //400
+console.log(arr3);//[empty × 100, 50, empty × 149, 45, empty × 99, 70, empty × 49]
+var arr=["a","apple",23,true,"ab"];
+console.log(arr.join(":")); //a:apple:23:true:ab
+//type - string
+console.log(arr.reverse());// ["ab", true, 23, "apple", "a"]
+console.log(arr.concat(arr2)); //["ab", true, 23, "apple", "a", 10, 20]
+console.log(arr.slice(1,5));//[true, 23, "apple", "a"]
+console.log(arr);
+console.log(arr.pop());  // a
+console.log(arr);//["ab", true, 23, "apple"]
+console.log(arr.push("name"));
+console.log(arr);//["ab", true, 23, "apple", "name"]
+console.log(arr.shift());//[true, 23, "apple", "name"]
+console.log(arr);
+console.log(arr.unshift("name1"));//["name1", true, 23, "apple", "name"]
+console.log(arr);
+</script>

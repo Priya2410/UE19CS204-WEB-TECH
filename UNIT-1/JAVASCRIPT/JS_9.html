@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Implicit and Explicit conversion
+</title>
+
+</head>
+<body>
+<script>
+var userage=21.06;
+document.write(userage); //21.06
+document.write('<br>');
+var quote="today is a \"beautiful\" day";
+document.write(quote); //today is a "beautiful" day
+document.write('<br>');
+var defined;
+document.write(defined); //undefined
+document.write('<br>');
+var bol=true;
+document.write(bol); //true
+document.write('<br>');
+console.log(1+2);   // 3
+console.log("august" + 2019);   //August2019                                              //string concatenation operator
+console.log(2019 + "august"); 	//2019August												//number is coerced to a string
+console.log(7 * "3"); 			//21 										 //operator used for only number 
+console.log(7 *"string"); 		//NaN										// tries to convert string and produces NAN
+
+// explicit conversion
+document.write(parseInt(12+12)); //24
+document.write("<Br>");
+document.write(parseFloat(3.142)); //3.142
+document.write("<Br>");
+document.write(parseInt(3.142+3.6)); //6
+document.write("<Br>");
+document.write(parseInt("sometext24")); //NaN
+document.write("<Br>");
+document.write(parseInt("24sometext")); //24
+document.write("<Br>");
+document.write(parseInt(3.14+3.2));//6
+document.write("<Br>");
+</script>
+</body>
+</html>
