@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <input type="text" id="field1" placeholder="Field1"><br><br>
+        <input type="text" id="field2" placeholder="Field2">
+        <button id="copy">Copy the text</button>
+        <script>
+            var ele=document.querySelector('#copy');
+            ele.addEventListener('click',function(){
+                var field1text=document.getElementById('field1').value;
+                var field2text=document.getElementById('field2');
+                field2text.value=field1text;
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<body>
+    <button id="myBtn">Try it</button>
+    <p id="demo"></p>
+    <script>
+        var ele=document.getElementById('myBtn');
+        ele.addEventListener('click',clicked);
+        ele.addEventListener('mouseover',mouseOver);
+        ele.addEventListener('mouseout',mouseOut);
+        function clicked(){
+            var p=document.querySelector('#demo');
+            p.innerHTML+='Clicked<br>'
+        }
+        function mouseOut(){
+            var p=document.querySelector('#demo');
+            p.innerHTML+='Mouse Out<br>'
+        }
+        function mouseOver(){
+            var p=document.querySelector('#demo');
+            p.innerHTML+='Mouse Over<br>'
+        }
+    </script>
+</body>

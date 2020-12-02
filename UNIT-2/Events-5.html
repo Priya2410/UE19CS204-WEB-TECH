@@ -1,0 +1,11 @@
+<html>
+    <body>
+        <h1>Hi click on me to see the coordinates of the mouse pointer</h1>
+        <script>
+            document.querySelector('h1').addEventListener('click',function(event){
+                document.querySelector('h1').innerHTML+='<br>Coordinates are:'+event.clientX+" "+event.clientY;
+            })
+        </script>
+    </body>
+
+</html>

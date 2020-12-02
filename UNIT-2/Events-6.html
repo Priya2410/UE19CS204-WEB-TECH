@@ -1,0 +1,18 @@
+<html>
+    <body onmousedown="isKeyPressed(event)">
+        <p>Click Here</p>
+    <script>
+        function isKeyPressed(e)
+        {
+            if(e.shiftKey)
+            {
+                document.querySelector('p').innerHTML='Shift KEY was Pressed';
+            }
+            else
+            {
+                document.querySelector('p').innerHTML='Shift key was not Pressed';
+            }
+        }
+    </script>
+    </body>
+</html>

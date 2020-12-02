@@ -1,0 +1,14 @@
+<html>
+    <body onclick="clicked(event)">
+        <p>Hi click on me</p>
+        <h1>Click on me to see the target</h1>
+        <script>
+            function clicked(event)
+            {
+                var ele=document.createElement('p');
+                ele.innerHTML=event.target.nodeName;
+                document.body.appendChild(ele);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+Events
+can be clicking on a element,listening to the key
+To work with events we need to 
+1)Listen to the event
+2)React to the event
+
+.addEventListener //Listens to the function //Notify the applications that event has triggered
+.addEventListener('click',callback)
+
+Listening to events can be done in three ways
+1)Inline events onclick,ondblclick,onkeydown,onkeyup
+2)Traditional events
+3)W3C Model addEventListener
+
+Events 
+click
+dblclick
+mouseover
+mouseout
+mousedown
+event.shiftKey is true if its pressed else false
+event.altKey
+event.clientX 
+event.clientY where X and Y are coordinates of the mouse pointer
+
+Keyboard Events
+keydown 
+keyup
+event.keyCode to know which key was pressed 
+
+onfocus 
+onblur
+like on input type if we click on it you get onfocus else onblur
+
+Event Bubbling
+addEventListener(event,function,bubbling phase)

@@ -1,0 +1,18 @@
+<body>
+    <ul id="mylist">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    <script>
+        var node=document.createElement('li');
+        var ele=document.createTextNode('Water');
+        node.appendChild(ele)
+        document.getElementById('mylist').appendChild(node);
+        //document.body.removeChild(node);
+
+        // var ele1=document.createElement('li')
+        // ele1.textContent='Water';
+        // document.getElementById('mylist').appendChild(ele1);
+    </script>
+</body>

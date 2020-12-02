@@ -1,0 +1,17 @@
+<body>
+    <button id="myBtn">Try it</button>
+    <p id="demo"></p>
+    <script>
+       var para=document.getElementById("demo");
+       var p1=5;
+       var p2=7;
+       var ele=document.getElementById("myBtn");
+       ele.addEventListener("click",()=>{add(p1,p2)})
+       function add(a,b)
+       {    
+           result=a*b;
+           para.innerHTML=result;
+
+       };
+    </script>
+</body>

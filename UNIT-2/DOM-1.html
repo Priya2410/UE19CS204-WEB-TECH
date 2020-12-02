@@ -1,0 +1,27 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <p>Hello World</p>
+        <p>This is HTML5</p>
+        <p id="info">Priya Mohata</p>
+        <p class="demo">PESU</p>
+        <script type="text/javascript">
+            var p=document.getElementById("info");
+            console.log(p.textContent);
+            var arr=document.getElementsByTagName("p");
+            console.log(arr);
+            var class1=document.getElementsByClassName('demo')[0];
+            console.log(class1.textContent);
+            var q1=document.querySelector("#info");
+            console.log(q1.textContent);
+            var qarr=document.querySelectorAll("p");
+            console.log(qarr[2].textContent);
+        </script>
+    </body>
+</html>
+
+<!-- Priya Mohata
+DOM-1.html:13 HTMLCollection(4) [p, p, p#info, p.demo, info: p#info]
+DOM-1.html:15 PESU
+DOM-1.html:17 Priya Mohata -->

@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <style type='text/css'>
+            input[type='text'],textarea{
+                display:block;
+                padding-left:3%;
+                margin:2%
+            }
+            div{
+                border:1px solid black;
+                background-color: pink;
+                width:400px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>College Review</h1>
+        <input type="button" value="Add review" onclick="newReview()">
+        <input type="button" value="Delete review" onclick="delReview()">
+        <label class="count" id="count" >0</label>
+        <script>
+            function newReview()
+            {
+                var reviewDiv=document.createElement('div');
+                var input1=document.createElement('input');
+                input1.setAttribute('type','text');
+                input1.setAttribute('placeholder','Enter College Name');
+                var textbox=document.createElement('textarea');
+                textbox.setAttribute('rows',6);
+                textbox.setAttribute('cols',10);
+                textbox.setAttribute('placeholder','Your comments here...');
+                reviewDiv.appendChild(input1);
+                reviewDiv.appendChild(textbox);
+                document.body.appendChild(reviewDiv)
+                var count=document.getElementById('count');
+                count.innerHTML=(parseInt(count.innerHTML))+1;
+            }
+            function delReview()
+            {
+                document.body.removeChild(document.body.lastChild);
+                var count=document.getElementById('count');
+                count.innerHTML=(parseInt(count.innerHTML))-1;
+            }
+        </script>
+</html>

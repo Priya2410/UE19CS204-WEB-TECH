@@ -1,0 +1,86 @@
+DOM - Document Object Model
+To make the web pages interactive
+
+Drawbacks of document.write()
+First the page will load
+and then content is loaded
+
+DOM is the representation of the web page
+DOM can be manipulated by JS
+
+the meta tag in head gives information of the web page
+
+DOM represents HTML as nodes+objects
+Collection of objects- Node list
+
+DOM has method and properties.
+
+Accessing Elements in the DOM:
+1)Access element by ID 
+document.getElementById()
+
+2)Access element by Class - returns array
+document.getElementsByClassName()
+
+3)Access element by tagname
+document.getElementByTagName()
+
+4)Access element by name - the attribute of form
+document.getElementsByName()
+
+5)Query Selector:
+document.querySelector("#demo")
+document.querySelector(".demo")
+document.querySelector("p")
+document.querySelector("p .demo")
+
+6)Query Selector All:
+document.querySelectorAll("p"); //All Paragraph tags //Returns array
+
+
+Traversing the DOM:
+window -> document ->HTML
+html->head and body 
+Where head and body are siblings 
+html is the parent
+
+Every element in the DOM has a parent-sibling-child relationship
+
+properties to reach the DOM:
+first-child
+parentNode
+last-child
+nextSibling
+
+If a parent has one child both first and last child point at the same element
+If a parent has no child and when you try to access the children you get None
+
+div parents child=img,span,h1
+children=[img,span,h1]
+has a length property 
+
+
+Properties :
+
+.innerHTML
+.textContent
+.childNodes -- array
+.parentNode
+.previousSibling
+.nextSibling
+.createElement()
+.setAttribute
+.style.color=
+.style.border
+.style.backgroundColor
+parent.insertBefore(new,sibling)
+.createTextNode
+parent.removeChild()
+parent.appendChild()
+parent.replaceChild(new,old)
+.setAttribute('type','text')
+document.body.appendChild(div) //Example
+.firstChild
+.lastChild
+.getAttribute()
+

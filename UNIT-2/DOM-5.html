@@ -1,0 +1,15 @@
+<body>
+    <ul id="mylist">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    <script>
+        var newnode=document.createElement('li');
+        var ele=document.createTextNode('Water');
+        newnode.appendChild(ele)
+        var oldnode=document.getElementById('mylist');
+        // insertBefore(new,reference to sibling)
+        oldnode.insertBefore(newnode,oldnode.firstChild)
+    </script>
+</body>

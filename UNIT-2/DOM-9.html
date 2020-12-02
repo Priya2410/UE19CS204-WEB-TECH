@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <ul id="mylist">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+        <script>
+            var ele=document.createElement('li');
+            var text=document.createTextNode('Water')
+            ele.appendChild(text);
+            var list=document.querySelector("#mylist");
+            list.replaceChild(ele,list.childNodes[1]);
+        </script>
+    </body>
+
+</html>

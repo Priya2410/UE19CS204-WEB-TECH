@@ -1,0 +1,24 @@
+<body>
+    <p>Hello World</p>
+    <div>Welcome to PESU</div>
+    <h1>This is not nice</h1>
+<script>
+    // var bodyElement=document.body;
+    // if(bodyElement.firstChild) //if body has a child
+    // {
+    //     bodyElement.style.border='5px solid green';
+    // }
+
+    //To access all child elements
+    var bodyElement=document.body;
+    for(i=0;i<bodyElement.children.length;i++)
+    {
+        var child=bodyElement.children[i].tagName;
+        console.log(child);
+    }
+
+    
+
+
+</script>
+</body>

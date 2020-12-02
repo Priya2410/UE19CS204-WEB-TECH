@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <script>
+            document.body.addEventListener('keydown',fun2,false);
+            document.body.addEventListener('keyup',fun1,false)
+            function fun2(event)
+            {
+                console.log(event.type); // keydown
+                console.log(this) //body
+                document.write(event.keyCode+" "+event.key+" was pressed")
+            }
+            function fun1(event)
+            {
+                console.log(event.type); //keyup 
+                console.log(this) // body here //refers to the element firing the event
+                document.write(event.keyCode+" "+event.key+" was released")
+            }
+        </script>
+    </body>
+</html>

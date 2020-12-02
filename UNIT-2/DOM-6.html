@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>HTML Elements by Tag Name</h2>
+        <p style="color:red;"><b>A SECTION</b></p>
+        <p>B SECTION</p>
+        <p id="demo"></p>
+        <script>
+        var x = document.getElementsByTagName("p");
+        document.getElementById("demo").innerHTML =
+                "Content of p tag " + x[1].innerHTML;
+        </script>
+    </body>
+</html>

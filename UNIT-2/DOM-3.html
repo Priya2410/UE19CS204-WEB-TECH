@@ -1,0 +1,19 @@
+<body>
+    <p>Hello World</p>
+    <div>Welcome to PESU</div>
+    <h1>This is not nice</h1>
+<script>
+    //Adding element to the DOM
+    var element=document.createElement('p');
+    element.textContent="<em>Hi,this is a new element</em>";
+    element.style.backgroundColor='pink';
+
+    var element1=document.createElement('h1');
+    element1.innerHTML="<em>Hi,this is emphasized</em>"
+
+    //To append it to the body
+    document.body.appendChild(element);
+    //p will be the parent to h1 tag
+    element.appendChild(element1);
+</script>
+</body>

@@ -1,0 +1,11 @@
+<html>
+    <body>
+        <p id="demo" ondblclick="myfunction(event)">Double click on me to see the MaGiC!</p>
+        <script>
+            function myfunction(event){
+                console.log(event.target); //p
+                document.querySelector('p').innerHTML='I have changed tadaaa!';
+            }
+        </script>
+    </body>
+</html>

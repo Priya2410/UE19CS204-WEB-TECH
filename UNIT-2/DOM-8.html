@@ -1,0 +1,46 @@
+<html>
+    <body>
+        <button onclick="updateStatus()">Make Update Status</button>
+        <script>
+            function updateStatus()
+            {
+                var post=prompt('Whats on your mind');
+                var post1=document.createElement('div');
+                var para=document.createElement('p');
+                para.textContent=post;
+                post1.appendChild(para);
+                var like=document.createElement('input');
+                like.setAttribute('type','button');
+                like.setAttribute('value','like')
+                var count=document.createElement('input');
+                count.setAttribute('type','button');
+                count.setAttribute('value',0)
+                count.setAttribute('id','count')
+                var comment=document.createElement('input');
+                comment.setAttribute('type','button');
+                comment.setAttribute('value','Comment')
+                var del=document.createElement('input');
+                del.setAttribute('type','button');
+                del.setAttribute('value','Delete Post')
+                post1.appendChild(like);
+                post1.appendChild(count);
+                post1.appendChild(comment)
+                post1.appendChild(del);
+                document.body.appendChild(post1);
+                like.addEventListener('click',function(){
+                    var count=document.querySelector("#count");
+                    count.value=parseInt(count.value)+1;
+                })
+                comment.addEventListener('click',function(){
+                    var comment1=prompt('Enter your comment');
+                    var div1=document.createElement('div');
+                    div1.textContent="Your comment is :"+comment1;
+                    post1.appendChild(div1);
+                })
+                del.addEventListener('click',function(){
+                    document.body.removeChild(document.body.lastChild)
+                })
+            }
+        </script>
+    </body>
+</html>
