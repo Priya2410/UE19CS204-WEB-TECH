@@ -1,0 +1,61 @@
+XML- Extensible Markup Language
+Better representation for data formats with a hierarchical structure.
+Features:
+1)XML tags are not predefined to define your customized tags.
+Like in html we have p,br tag we dont have predefined tags here
+2)XML was designed to carry the data / transfer the data
+3)Easy to understand
+4)Easy to write programs
+
+JSON-Javascript Object Notation
+key-value pair
+Alternative to XML
+Features :
+1)Usage is straightforward
+2)Better Performance
+3)It is Free 
+4)No need to create mapping
+5)No dependency
+
+Pros : supports all browsers
+Easy to grasp
+Syntax is straightforward
+Creation and manipulation is Easy
+All major JS frameworks support JSON
+
+ Ex:
+ XML
+
+ <empinfo>
+    <employees>
+        <employee>
+            <name>Priya Mohata</name>
+            <age>20</age>
+        </employee>
+    </employees>
+    <employees>
+        <employee>
+            <name>Parth Mohata</name>
+            <age>20</age>
+        </employee>
+    </employees>
+</empinfo>
+
+JSON
+
+{
+    "empinfo":
+    {
+        "employees":
+        [
+            {
+            "name":"Priya Mohata",
+            "age":20;
+            }
+            {
+            "name":"Parth Mohata",
+            "age":20;
+            }
+        ]
+    }
+}

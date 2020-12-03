@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <style>
+            div{
+                border:1px solid black;
+                padding:2%;
+                text-align:center;
+                
+            }
+        </style>
+    </head>
+    <div id="DIV1" class="divStyle">
+        DIV 1
+        <div id="DIV2" class="divStyle">
+            DIV 2
+            <div id="DIV3" class="divStyle">
+                DIV 3
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    document.querySelector("#DIV1").addEventListener('click',clickHandler,true)
+    document.querySelector("#DIV2").addEventListener('click',clickHandler,true)
+    document.querySelector("#DIV3").addEventListener('click',clickHandler,true)
+    //Bubbling phase
+    // document.querySelector("#DIV1").addEventListener('click',clickHandler,false)
+    // document.querySelector("#DIV2").addEventListener('click',clickHandler,false)
+    // document.querySelector("#DIV3").addEventListener('click',clickHandler,false)
+    function clickHandler(){
+        alert(this.getAttribute('id')+" is clicked");
+    }
+    </script>
+</html>

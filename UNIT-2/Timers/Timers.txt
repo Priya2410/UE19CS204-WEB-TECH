@@ -1,0 +1,8 @@
+setTimeout
+setInterval
+
+window.setTimeout(function,time) - function is called only once after the particular time which is mentioned
+window.setInterval(function,time)-function is executed multiple times after particular time executed in intervals
+
+clearInterval - to clear the interval object
+clearTimeout - to clear the timeout object

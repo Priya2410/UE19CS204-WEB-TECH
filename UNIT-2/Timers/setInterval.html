@@ -1,0 +1,13 @@
+<html>
+    <script>
+        var count=0;
+        var obj=setInterval(function(){
+            count+=1;
+            if(count==5)
+            {
+                clearInterval(obj);
+            }
+            alert("called "+ count +" times");
+        })
+    </script>
+</html>

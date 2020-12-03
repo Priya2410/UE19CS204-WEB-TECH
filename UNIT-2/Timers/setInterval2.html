@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <p id="spent">Seconds spent here: 0</p>
+        <script>
+            var count=0;
+            var obj=setInterval(
+            function()
+            {
+                count++;
+                var ele=document.querySelector("#spent");
+                ele.innerHTML="Seconds spent here :"+count;
+                if(count==10)
+                {
+                    clearInterval(obj);
+                }
+            },1000)
+        </script>
+    </body>
+</html>

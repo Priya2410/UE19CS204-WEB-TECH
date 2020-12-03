@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <style>
+            h1{
+                text-align: center;
+                color:orange;
+                text-transform:uppercase;
+            }
+            td,th{
+                width:20px;
+                height:20px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Squares and Cubes using Javascript</h1>
+        <table id="square" border="2">
+            <tr>
+                <th>Number</th>
+                <th>Square</th>
+                <th>Cube</th>
+            </tr>
+        </table>
+        <script>
+            for(i=1;i<=10;i++)
+            {
+                var ele=document.createElement('tr');
+                var ele1=document.createElement('td');
+                var ele2=document.createElement('td');
+                var ele3=document.createElement('td');
+                ele1.innerHTML=i;
+                ele2.innerHTML=i*i;
+                ele3.innerHTML=i*i*i;
+                ele.appendChild(ele1);
+                ele.appendChild(ele2);
+                ele.appendChild(ele3);
+                document.getElementById('square').appendChild(ele);
+            }
+        </script>
+    </body>
+</html>

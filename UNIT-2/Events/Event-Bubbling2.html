@@ -1,0 +1,33 @@
+<!--1. The event.currentTarget property does not necessarily return the element that was clicked on, but the element whose eventlistener triggered the event.
+2. event.target property returns the element on which the event was fired-->
+
+<head> 
+    <style> 
+        div{
+        border:2px red solid;
+        height:50px;width=20px;	}
+    </style>
+    </head>
+    
+    <body>
+      <div id="parent">
+        <button id="child">Child</button>
+      </div>
+      <!-- currentTarget where it is in the bubbling/capture phase
+      event.target gives the element that triggered the event -->
+      <script>
+        var parent = document.querySelector('#parent');
+     parent.addEventListener('click', function(event){console.log(event.currentTarget.nodeName+" is clicked. The target is"+event.target);},true);
+    
+        var child = document.querySelector('#child');
+     child.addEventListener('click', function(event){console.log(event.currentTarget.nodeName+" is clicked. The target is"+event.target);},true);
+
+     // if we click on the button since the third argument is true
+//DIV is clicked. The target is[object HTMLButtonElement]
+//BUTTON is clicked.The target is[object HTMLButtonElement]
+
+// if we click on the button since the third argument is false
+// BUTTON is clicked. The target is[object HTMLButtonElement]
+// Event-Bubbling2.html:20 DIV is clicked. The target is[object HTMLButtonElement
+      </script>
+    </body>

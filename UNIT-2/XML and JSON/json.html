@@ -1,0 +1,9 @@
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        var myJSON='{"name":"Priya Mohata","age":20,"city":"Bangalore"}';
+        var myObj=JSON.parse(myJSON); //string to JS Object
+        document.getElementById('demo').innerHTML=myObj.name;
+    </script>
+</body>

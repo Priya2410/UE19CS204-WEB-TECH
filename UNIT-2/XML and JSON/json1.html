@@ -1,0 +1,20 @@
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    
+    <script>
+    var str='{"name":"Thor","cast":["Chris Hemsworth","40"]}'; // {} - objects, [] - Arrays
+    var obj=JSON.parse(str); //string to object
+    document.querySelector("#demo").innerHTML=obj.name;
+    console.log(obj.cast);
+    
+    obj.year="2017";  //can add additional properties
+    obj.rating="7.0";
+    obj.cast[2]="New York";
+    
+    var newstr=JSON.stringify(obj); //object to string
+    document.querySelector("#demo1").innerText=newstr;
+    
+    </script>
+    </body>
+    

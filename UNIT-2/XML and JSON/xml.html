@@ -1,0 +1,35 @@
+<!-- At times when we convert XML to DOM - parsing 
+DOM tree to XML - Serialize
+XMLSerializer = Converts or serializes the DOM tree to XML strings
+DOMParser = to convert XML to dom -->
+
+<body>
+    <p id="demo"></p>
+    <script>
+        var text="<bookstore>"+
+                    "<book>"+
+                    "<title>C++</title>"+
+                    "<author>Herbert</author>"+
+                    "<year>2005</year>"+
+                    "</book>"+
+                    "<book>"+
+                    "<title>Java</title>"+
+                    "<author>Tom</author>"+
+                    "<year>2000</year>"+
+                    "</book>"+
+                    "</bookstore>"
+
+        var parser=new DOMParser();
+        //parser is the object 
+        // parseFromString(string,MIME type);
+        //MIME type - type of content
+        domxml=parser.parseFromString(text,'text/xml'); 
+        author=domxml.getElementsByTagName('author')[0];
+        author.childNodes[0].nodeValue+=' George';
+        document.getElementById('demo').innerHTML=author.firstChild.nodeValue;
+
+        var sel=new XMLSerializer()
+        strxml=sel.serializeToString(domxml);
+        console.log(strxml);
+    </script>
+</body>

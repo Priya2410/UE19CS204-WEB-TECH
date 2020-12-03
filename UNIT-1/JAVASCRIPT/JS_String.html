@@ -4,7 +4,23 @@ var s="helloworld"
 	console.log(s.indexOf('ll')) //2
 	console.log(s.indexOf('l')) //2
 	console.log(s.substring(3,6)) //low
-	console.log(s.substr(3,6)) //low
-	console.log(s.slice(3,6)) //loworl
+	console.log(s.substr(3,6)) //loworl
+	console.log(s.slice(3,6))  // low
 	console.log(s.length) //10
 </script>
+
+<!-- Difference between substring,substr,slice
+substring and slice are same
+substr(start,length)
+substring(start,end) -->
+
+<!-- substring()
+Separate results of substring()
+If start > stop, then function swaps both arguments.
+If any argument is negative or is NaN, it is treated as 0.
+
+slice()
+Separate results of slice()
+If start > stop, This function will return an empty string. (“”)
+If start is negative, It sets char from the end of string, like substr().
+If stop is negative, It sets stop = string.length – Math.abs(stop) (original value) -->

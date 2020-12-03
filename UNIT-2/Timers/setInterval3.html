@@ -1,0 +1,22 @@
+<html>
+    <body onload="start()">
+        <p>Squares and Cubes<br></p>
+        <script>
+            function start()
+            {   
+                var count=1;
+                var obj=setInterval(function(){
+                    if(count==10)
+                    {
+                        clearInterval(obj);
+                    }
+                    var ele=document.querySelector('p');
+                    var sq=count*count;
+                    var cube=count*count*count;
+                    ele.innerHTML+="Square of "+count+" is:"+sq+"<br>"+"Cube of "+count+" is:"+cube+"<hr>";
+                    count++;
+                },1000)
+            }
+        </script>
+    </body>
+</html>

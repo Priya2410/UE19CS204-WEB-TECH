@@ -1,0 +1,27 @@
+addEventListener(eventtype,function,useCapture)
+third argument
+
+Suppose there are two elements that call on click together
+Which will get executed first
+
+There are two ways in which events are called
+Event Capture
+and Event Bubble
+
+Event Capture takes place when the third arg as true
+Event Bubbling takes place when third arg is false
+
+Event Capture is top down approach
+
+<html>
+    <head>
+    <body>
+        <h1>
+        <p> event occured here
+
+In capturing phase:
+Document->Html->body->h1->p
+
+In Bubbling
+p->h1->body->html->Document
+
