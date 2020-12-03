@@ -1,0 +1,27 @@
+In html5 they have improved the relability 
+<header></header>
+<nav> </nav>   ----NAVBAR 
+<article> -----MAIN CONTENT
+<section>
+<sidebar>
+</article>
+<footer>
+
+Instead of the div tags we use this
+This helps in easy readability
+
+<!DOCTYPE html> Tells that its html5
+<meta charset="UTF-8">
+Encoding is UTF-8
+We have new tags <audio><video><nav><progress>
+There are new features - graphics and animation via SVG and Canvas
+Api- geolocation helps in identifying the location of the user.
+Supported by all new browsers
+We can draw shapes like rectangle,triangle,circle
+It has an API called web workers helps in running JS in background.
+
+Semantic Tags-have a meaning - <header><footer><aside><article><section>
+Graphic Elements-<canvas><svg>
+Multimedia <audio><video><progress>
+
+

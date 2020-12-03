@@ -1,0 +1,14 @@
+<body>
+    <progress min="0" value="30" max="100"></progress>
+    <script>
+        var ele=document.querySelector('progress');
+        var obj=setInterval(function(){
+            console.log("Done")
+            ele.value+=10;
+            if(ele.value==ele.max)
+            {
+                clearInterval(obj);
+            }
+        },2000)
+    </script>
+</body>

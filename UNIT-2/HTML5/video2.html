@@ -1,0 +1,28 @@
+<!-- The HTML Video element (<video>) embeds a media player which supports video playback into the document. 
+Attributes: autoplay, src, width, heigth, controls, currentTime,duration(Read only), loop, muted
+The currentTime property sets or returns the current position (in seconds) of the video playback.
+The duration property returns the length of the current audio/video, in seconds.
+-->
+
+<body onload="init()">
+    <!-- autoplay plays automatically when the page loads
+    inititally when the video is loaded the video is muted
+controls- play pause -->
+    <video autoplay controls id="v1" height="200px" width="400px">
+        <source type="video/mp4" src="Tom & Jerry.mp4"></source>
+    </video>
+    <script>
+                var v1;
+                function init(){
+                    v1 = document.querySelector("#v1");
+                    setInterval(fun,5000);
+                }
+                function fun()
+                {
+                    var num=Math.random()*(v1.duration-5) //Playing the video at any time I want
+                    console.log(num);
+                    v1.currentTime=num;
+                }
+    </script>
+    
+    </body>
