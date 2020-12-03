@@ -1,0 +1,41 @@
+Difference between process and thread
+
+Program 
+Threads execute on the same Program
+and threads can collide when they want to update same part of the Program
+
+Reading a single newspaper shared by people
+Program has multiple lines where threads are accessing it.
+One thread could print the screen.
+One thread could update the backend.
+
+Program under execution - Process 
+Dividing the program into sub parts - Threads 
+Threads are light weight 
+and process is heavy weight
+
+Web workers
+Independent file
+Message based communication
+Running background scripts in the backend
+Web workers will not disturb the main thread
+They run in the background.
+When a script is executing in web worker it cant access the DOM
+Run in a isloated thread
+Web workers can run multiple JS parallely
+
+var worker = new Worker('task.js')
+worker will create a thread for task.js
+task.js will run in the background without disturbing the main file
+after creating the web worker we send a post Message
+
+Main thread and worker thread communicate via postMessage
+and the event is onMessage
+Main thread - triggers postMessage(data) and that event is handled by onmessage event handler
+Then similary the worker thread will send the postMessage(data)
+and the main thread can use the processed data of the worker 
+
+Ways to stop the worker 
+worker.terminate()
+self.close()
+
