@@ -1,0 +1,28 @@
+ <html>
+     <head>
+         <title>My Canvas and SVG</title>
+         <style>
+             #c1{border:5px solid red;}
+         </style>
+         <script>
+             function init()
+             {
+                 canvas=document.getElementById("c1");
+                    ctx=canvas.getContext("2d");
+                    // ctx.fillStyle="red";
+                    // ctx.fillRect(200,20,150,100);
+
+                    ctx.fillStyle="yellow"; 
+                    ctx.strokeStyle="green" //Border of the circle
+                    ctx.arc(100,100,80,0,Math.PI*2); // x,y,radius,startangle,endangle
+                    ctx.stroke();
+                    ctx.fill();
+
+             }
+         </script>
+         </head>
+         <body onload="init()">
+             <canvas id="c1" width="400px" height="200px">
+             </canvas>
+         </body>
+ </html>

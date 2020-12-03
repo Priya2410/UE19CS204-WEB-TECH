@@ -1,0 +1,28 @@
+<script>
+    var c1, ctx;
+    function func(){
+        c1=document.getElementById("c1");
+        //Whenever you click on the canvas the draw function must be triggered
+        c1.addEventListener('click',draw) // traditional way of calling an event in JS
+        //When you dont draw you will get a rectangle drawn 
+        ctx=c1.getContext("2d")
+        ctx.fillStyle="turquoise";
+        ctx.fillRect(100,100,100,200);
+        //ctx.arc(100,200,80,0,2*Math.PI,1)
+        //ctx.fill();
+    }
+    function draw(event){
+        //when we click the rectangle is cleared 
+        ctx.clearRect(0,0,800,400);
+        ctx.beginPath(); //The beginPath() method begins a path, or resets the current path.
+        //Wherever you click circle will be drawn
+        ctx.arc(event.clientX,event.clientY,80,0,Math.PI*2,0)
+        ctx.fill();
+        ctx.closePath();
+    }
+    </script>
+    
+<body onload="func()"> <!-- inline way of trigerring an event;-->
+<canvas id="c1" width="800px" height="400px" style="border:5px double darkviolet;">
+    Canvas is not supported by the Browser!!
+</canvas>

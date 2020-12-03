@@ -24,4 +24,25 @@ Semantic Tags-have a meaning - <header><footer><aside><article><section>
 Graphic Elements-<canvas><svg>
 Multimedia <audio><video><progress>
 
+Canvas used JS to draw graphics on the web page
+<canvas id="" width="" heigh""></canvas>
 
+We can manipulate the canvas by JS
+.getContext('2d/3d')
+.fillStyle=color;
+.fillRect(x,y,height,width) x,y are coordinates //draws a filled rectangle
+moveTo(x,y)
+strokeRect(x,y,width,height)  // just draws outline
+clearRect(x,y,width,height) //removes the rectangle
+.font
+.lineTo(x,y)  //line from current position to x,y
+.arc(x,y,r,sangle,eangle,anticlockwise)  ///draws a arc where r-radius sangle=start angle eangle=end angle 
+
+
+SVG - Scable Vector graphics
+<circle cx="" cy="" r="" stroke="" stroke-width="" fill="">
+Where cx is coordinate-x 
+cy coordinate-y
+stroke- border
+r is radius
+fill color of the circle
