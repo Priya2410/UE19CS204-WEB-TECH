@@ -1,0 +1,28 @@
+Geolocation :
+One can access the location only if the user allows
+navigator.geolocation object
+
+Allows you to access location using two functions.
+getCurrentPosition()
+Returns the location of the visitor only once
+
+watchPosition()
+when the visitor moves that location is also shown
+initial location is also shown
+
+getCurrentPosition(success callback,error callback(optional),geolocation option(optional))
+
+these methods have position as the argument
+
+success callback receives position :
+1)latitude
+2)longitude
+3)accuracy
+4)altitude
+5)speed
+
+Error callback
+1 means permission denied
+2 means position unavailable
+3 timeout error
+

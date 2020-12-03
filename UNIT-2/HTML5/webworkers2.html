@@ -1,0 +1,28 @@
+<html>  
+    <head>  
+        <style>  
+            .div1{  
+                margin-left: 350px;  
+            }  
+        </style>  
+    </head>  
+    <body>  
+        <!-- Square Output Result -->  
+        <div class="div1">  
+            <h2>Example of Web Worker</h2>  
+            <label>Enter the number to find the square</label>  
+            <br><input name="num" id="num"><br>  <!-- default type="text", a textbox;-->
+            <br><button id="submit">Submit</button>  
+            <button id="other">Wait</button>  
+            <div id="text"></div>  
+        </div>  
+        <script>
+            var sub=document.getElementById('sub');
+            sub.addEventListener('click',function(){
+            var num=document.getElementById('num');
+            worker.postMessage(num)});
+            worker.addEventListener('message',function(event)
+            {
+                console.log("worker said:"+event.data);
+            }
+        </script>

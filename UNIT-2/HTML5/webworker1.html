@@ -1,0 +1,7 @@
+<script>
+    var worker=new Worker('web1.js') // create a new thread for web1 .js file
+    worker.postMessage('Hello World')//sends the message to the work 
+    worker.addEventListenter('message',function(event){
+        console.log("worker said :"+event.data);
+    })
+</script>

@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>My first script</title>
+		<script type="text/javascript">
+		
+			tmp = 0;
+			function getPos()
+            {
+                /* //here navigator.geolocation  is a function */
+	            var id= navigator.geolocation.watchPosition(show, error);
+			}
+			function show(position)
+            {
+				tmp++;
+				if(tmp == 4)
+			navigator.geolocation.clearWatch(id);
+				console.log("Current Position: "+position.coords.latitude + " " + position.coords.longitude);
+			}
+			function error(error){
+				e = error;
+			}
+		
+		</script>
+	</head>
+	<body>
+		<button onclick="getPos()">Get Current Position</button>
+	</body>
+</html>

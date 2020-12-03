@@ -1,0 +1,25 @@
+<!--navigator.geolocation object allows you to access geo location  through two primary functions:
+getCurrentPosition() - Returns the location of the visitor as a one-time snapshot -->
+
+
+<html>
+	<head>
+		<script type="text/javascript">
+			function getPos(){
+			navigator.geolocation.getCurrentPosition(show, error);
+			}
+			function show(position){
+				console.log("Current position Latitude= "+position.coords.latitude + " Logitude= " + position.coords.longitude);
+			}
+			function error(error){
+				e = error;
+				console.log(e);
+            }
+            //Current position Latitude= 12.953190399999999 Logitude= 77.66015999999999
+            //GeolocationPositionError {code: 1, message: "User denied Geolocation"}
+		</script>
+	</head>
+	<body>
+		<button onclick="getPos()">Get Current Position</button>
+	</body>
+</html>
