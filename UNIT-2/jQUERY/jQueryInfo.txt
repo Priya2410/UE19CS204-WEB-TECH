@@ -1,0 +1,62 @@
+Its a JS Library
+Lightweight Library
+write less do more
+its fast and concise
+It has same features of JS but easier syntax
+
+Core features :
+1) Dom manipulation
+2) Ajax support
+3) Animation
+4) Event handling 
+5) Cross browser support
+
+to call jQuery 
+$(document).ready(function(){
+    //Statements when dom is ready
+})
+
+Ready ensures that the dom is ready before we manipulate it.
+
+Changing all the para tags to yellow
+
+$("p").css("color","yellow"); 
+
+$ is jQuery object
+( element )
+css(property,value)
+
+SELECTION OF TAGS 
+
+$("#header")  selecting by Id 
+$(".header")   selecting by class
+$("table")      selecting by tag name
+$("table .user-list")   selecting in combination
+Basic filters :first :last :even :odd
+Content filters :empty :contains(text)  :has(selector)
+[attribute] [attribute=value] [attribute != value]
+Forms :input :text :submit :password :enabled :checked 
+
+Events : bind() unbind() click() on()
+DOM manipulation: before() after() append() appendTo()
+
+
+.html() to get the value of the element and also to change the content ~ innerHTML
+.val() to get the value and to set the value of an element 
+.attr() to get the attribute and to set the attribute ~getAttribute and setAttribute
+.css() to give styling
+.css(style,value)
+.css({style:value,style:value})
+.on(event,function)
+.click(function())
+.ready()
+$(p:even) even numbered paragraphs are selected
+.after() element will be placed after the selected element
+.before() element will be placed before the selected element
+.append() adds content at the end of the selected element 
+.bind()
+.hide()
+.toggleClass // to add a class
+.fadeToggle // to fade it
+.show() // to show the element in a particular speed 
+.hide() // to hide the element in a particular speed 

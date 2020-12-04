@@ -1,0 +1,27 @@
+<!--The on() method attaches one or more event handlers for the selected elements and child elements.
+As of jQuery version 1.7, the on() method is the new replacement for the bind(), live() and delegate() methods. 
+ To remove event handlers, use the off() method.-->
+ <!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#myDiv").on("mouseover",function(){
+                $(this).html("<em>You hovered over me!</em>")
+            })
+            $("#myDiv").on("mouseleave",function(){
+                $(this).html("<em>You stopped hovering over me!</em>")
+            })
+            // $("#mydiv").off("mouseover") //to remove the event
+        })
+    </script>
+</head>
+<body>
+	<h1> Demo: Event binding </h1>
+    
+	<div id="myDiv" style="width:100px;height:100px;background-color:red;">
+    </div>
+</body>
+</html>

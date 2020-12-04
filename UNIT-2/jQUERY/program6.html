@@ -1,0 +1,27 @@
+<!--The html() method sets or returns the content (innerHTML) of the selected elements.
+1. When this method is used to return content, it returns the content of the FIRST matched element.
+2. When this method is used to set content, it overwrites the content of ALL matched elements.-->
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").on('click',function(){
+        var x=$("p").html();
+        console.log(x); //This is a paragraph
+        $("p").html("<em>Priya has changed me</em>")
+        $("p.A").html("<h1>Hi I am changed</h1>");
+    })
+})
+</script>
+</head>
+<body>
+
+<button>Change content of all p elements</button>
+
+<p class="A">This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+</body>
+</html

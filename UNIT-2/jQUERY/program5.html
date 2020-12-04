@@ -1,0 +1,43 @@
+<!--The val() method is an inbuilt method in jQuery.
+1. It is used to get current value of the first element in the set of matched elements.
+2. It is used to set the value of every matched element.
+This method apply on the HTML form elements.
+$(selector).val()
+$(selector).val(value)
+$(selector).val(function())-->
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>The val Method</title> 
+        <script src= 
+        "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+        </script>
+        <script>
+          
+        $(document).ready(function(){
+            $("button").on('click',function(){
+            var x=$("input:text").val()
+            console.log(x); //Priya
+            $("input:text").val("PES University");
+            $("input:text").css({
+                'backgroundColor':'pink',
+                'color':'red',
+                'fontSize':40,
+                'fontWeight':'bold',
+                'fontFamily':'monospace',
+                'textTransform':'uppercase'
+            })
+            })
+        })
+        </script> 
+         
+    </head> 
+    <body> 
+        <div> 
+            <p> 
+                <input type="text" name="user"> 
+            </p> 
+            <button>Click Here!</button> 
+        </div> 
+    </body> 
+</html> 

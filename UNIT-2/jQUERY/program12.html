@@ -1,0 +1,44 @@
+<!--show() to show the elements in a wrapped set and hide() to hide them.
+Syntax
+Here is the simple syntax for show() method −
+[selector].show( speed, [callback] );speed values:"slow", "normal", or "fast"
+callback − This optional parameter represents a function to be executed whenever the animation completes; -->
+<html>
+   <head>
+      <title>The jQuery Example</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		
+      <script>
+         $(document).ready(function(){
+             $("input:button#hide").on('click',function()
+             {
+                //  $("div.mydiv").hide("slow");
+                 $("div.mydiv").hide(2000);
+             })
+             $("input:button#show").on('click',function()
+             {
+                 $("div.mydiv").show("fast"); //speed can be normal fast and slow 
+             })
+         })
+      </script>
+		
+      <style>
+         .mydiv{ 
+            margin:10px;
+            padding:12px; 
+            border:6px ridge tomato; 
+            width:100px; 
+            height:100px;
+         }
+      </style>
+   </head>
+	
+   <body>
+      <div class = "mydiv">
+         This is a SQUARE
+      </div>
+
+      <input id = "hide" type = "button" value = "Hide" />   
+      <input id = "show" type = "button" value = "Show" />
+   </body>
+</html>

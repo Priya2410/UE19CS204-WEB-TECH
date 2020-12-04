@@ -1,0 +1,46 @@
+<!--The jQuery bind() event is used to attach one or more event handlers for selected elements from a set of elements. It specifies a function to run when the event occurs.
+$(selector).bind(event,function)   -->
+<!DOCTYPE html>  
+<html>  
+<head>  
+   <style>  
+  p {  
+    background: yellow;  
+    font-weight: bold;  
+    cursor: pointer;  
+    padding: 5px;  
+  }  
+  p.over {  
+     background: #ccc;  
+  }  
+  div {  
+    color: red;  
+  }  
+  </style>  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head> 
+<body>  
+<p>Click or double click on the statement.</p>  
+<div></div>  
+<script>  
+$(document).ready(function(){
+    $("p").bind("click",function(event)
+    {
+        var str=event.pageX+" "+event.pageY;
+        $("div").html("<b>Hi this is clicked once </b>"+str);
+
+    })
+    $("p").bind("dblclick",function()
+    {
+        $("div").html("<b>Hi "+this.nodeName+" was clicked twice</b>");
+        $(this).fadeToggle(); //fades the element //removes it
+    })
+    $("p").bind("mouseenter mouseleave",function(){ //gives hover effect bind can be applied to more than one event
+        $(this).toggleClass("over"); //Adds the class to div
+    })
+    // $("p").unbind("click"); //Remove click
+})
+
+</script>  
+</body>  
+</html>

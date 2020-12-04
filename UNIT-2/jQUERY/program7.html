@@ -1,0 +1,33 @@
+<!--
+The after() method inserts specified content after the selected elements.
+To insert content before selected elements, use the before() method.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").on("click",function(){
+        $("p.1").after("This is the new paragraph") 
+        // This is a paragraph.
+        // This is the new paragraph
+        // This is another paragraph.
+        $("p").after("This is the new paragraph") 
+        // This is a paragraph.
+        // This is the new paragraph
+        // This is another paragraph.
+        // This is the new paragraph
+    })
+})
+</script>
+</head>
+<body>
+
+<button>Insert content</button>
+
+<p class="1">This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+</body>
+</html>
