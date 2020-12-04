@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<style>
+			.g1{color:red}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+            $(document).ready(function(){
+                $("li:even").css('color','blue');
+                $("ul").append("<li>Fortnite</li>");
+                // var newli=document.createElement("li");
+                // $(newli).html("<li>Fortnite</li>");
+                // $("li:last").append(newli);
+                console.log($("li").html());
+                console.log($("li:last").text());
+            })
+
+		</script>
+	</head>
+	<body>
+		<p>Popular Games</p>
+		<ul>
+			<li>Call of Duty</li>
+			<li class="g1">Assasins Creed</li>
+			<li>Pubg</li>
+			<li>S</li>
+		</ul>
+	</body>
+</html>

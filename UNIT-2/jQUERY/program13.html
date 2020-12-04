@@ -1,0 +1,17 @@
+<!--jQuery toggle() - The jQuery toggle() is a special type of method which is used to toggle between the hide() and show() method. It shows the hidden elements and hides the shown element.
+$(selector).toggle();  
+$(selector).toggle(speed, callback);  
+$(selector).toggle(speed, easing, callback);  
+$(selector).toggle(display); //true;false
+easing: It specifies the easing function to be used for transition.
+callback: It is also an optional parameter. It specifies the function to be called after completion of toggle() effect.
+display: If true, it displays element. If false, it hides the element.-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#btntoggle").on('click',function(){
+    $("p.paratoggle").toggle(2000);});
+})
+</script>
+<p class="paratoggle">Click the below button to toggle this content.</p>
+<button id="btntoggle">Toggle show/hide</button>

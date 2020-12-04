@@ -1,0 +1,26 @@
+<!--jQuery fadeToggle() method is used to toggle between fadeIn() and fadeOut() effects. If the selected elements are faded out, the fadeToggle will fade in them, if they are faded in, then it will make them fade out.-->
+<!DOCTYPE html>
+
+    <body>
+    
+    <button id="fadein">Fade In</button>       
+    <button id="fadeout">Fade Out</button>        
+    <button id="togglefading">Toggle Fading</button>
+    <img src="https://lh3.googleusercontent.com/fife/ABSRlIr7e-NJl46LaOmUAQy-a2oRE-fePWWNQnfCzPWTAwiZdejOqWQPcQ2ioZ5ShV7Y1ZNu1q0t93QsGg96xC_MGV-xMEeVBk_FqHF5AXkT5Q6j9i6h4RCs1JVIBNCHjXSZauiyW6mkqwxuDcr-kmzGDsWApK8o5E14B-jTh74G3sNxh7I23WwX9OFeONyfHM5l60iXh6KRDC1GG5RgBbnPugbwsTEdEZW63DDz2coCjLHTP6jV8yRkivbNF67B2rehNPtwM8SmzXGILHZlVqcxrZqQGNMWBwMB2mGjrCbENQDx0qZQrY2YFWr0LAaGumAM6-c_SgvTGCeCO-XpOHJ50vLyaVyWI-jWH0xNH8oWmpKwB-pNpjScGfFJQcoZYKApSku0hhPQ6uEVDo1zuSx63ztvx8vfxjlC1xTn7Qb-iKQg3ovTB5MfvczJQykvuhglFko1nMmAyJwGSiuoB7Jbm1AandvfaEJdMYjA4zt72F1tckUDL_6phw5kqrzg4Vl6Ax1ki0fwWMqVcH6ZMU98JPovX8pMhGqP1BwfqNlCse10Nz_V9AGeMCr48feR-SJJmujQrI2lMcxAHp2Cyk-KG5tKjMOg1wLRX9BQqkaju6PQaHvgQfldx6cw81GHYNlBpSQ8g54WP00jh7T3nuILlIdLpo8gL0KLOO3TRbd1YpPYLlqG6EWbU9-kOy3hXWK9YJvc-8TvLycqG1jUglEEuBglCA2hC5gd1YM=w2880-h1674-ft" alt="minion" width="400px height="300">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // Monitors the buttons for a click events, fades <img> in response
+        $(document).ready(function(){
+            $("#fadein").on('click',function(){
+                $("img").fadeIn();
+            })
+            $("#fadeout").on('click',function(){
+                $("img").fadeOut();
+            })
+            $("#togglefading").on('click',function(){
+                $("img").fadeToggle('slow');
+            })
+        })
+    </script>
+    </body>

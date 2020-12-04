@@ -60,3 +60,8 @@ $(p:even) even numbered paragraphs are selected
 .fadeToggle // to fade it
 .show() // to show the element in a particular speed 
 .hide() // to hide the element in a particular speed 
+.toggle() replacement for show and hide 
+.fadeIn()
+.fadeOut()
+.fadeToggle()
+.animate(args - height , width etc,time)

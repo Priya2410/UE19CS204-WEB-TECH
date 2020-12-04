@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style>
+        .redDiv {
+            background-color: red;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+			$('#myDiv').animate({
+                            height: '200px',
+                            width: '200px'
+                        },
+                        5000);
+                $('#myDiv').animate({
+                            height: '100px',
+                            width: '100px'
+                        },
+                        5000);
+                });
+    </script>
+</head>
+<body>
+	<h1>Demo: jQuery animate() method</h1>
+
+	<div id="myDiv" class="redDiv">
+	</div>
+</body>
+</html
