@@ -1,0 +1,39 @@
+<html>
+    <script>
+        //Here we are calling a function first where we pass the value 2 to the function and the second argument is callback
+        //So when first is called 2 changes to 4 and it is stored in firstvalue
+        //The value of err becomes false
+        //Here third has to wait for second and second has to wait for first to be executed 
+        first(2,function(firstresult,err){
+            if(!err)
+            {
+                second(firstresult,function(secondresult,err){
+                    if(!err)
+                    {
+                        third(secondresult,function(thirdresult,err){
+                            if(!err)
+                            {
+                                console.log(thirdresult);
+                            }
+                        })
+                    }
+                })
+            }
+        })
+
+        function first(value,callback)
+        {
+            callback(value+2,false); // sends back 4,false
+        }
+
+        function second(value,callback) 
+        {
+            callback(value+2,false); // sends back 6,false
+        }
+
+        function third(value,callback)
+        {
+            callback(value+2,false); // sends back 8, false
+        }
+    </script>
+</html>

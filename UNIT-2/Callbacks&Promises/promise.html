@@ -1,0 +1,27 @@
+<!--var promise = new Promise(function(resolve, reject) //Promise constructor 
+{
+// promise description
+});-->
+<script>
+    var word;
+    word = true;
+    promise1 = new Promise(function(resolve, reject)
+    {
+      if (word)  // if word is true then resolve will work
+      {
+        resolve("This person likes to keep up the word");
+      } 
+      else  // if word is true then reject will work
+      {
+        reject("This person doesnt want to keep the word");
+      }
+    });
+    console.log(promise1); //print the object 
+    // Since its resolved promiseStatus if fullfilled and then we get the output
+    //Object[[PromiseState]]: "fulfilled"[[PromiseResult]]: "This person likes to keep up the word"
+
+    // if word is false
+//     Local
+// Exception: "This person doesnt want to keep the word"
+
+    </script>

@@ -1,0 +1,44 @@
+What is asyncronous operation in JS ?
+
+Synchronous JS is step by step execution 
+While asyncronous is used when we want to fetch data from some source like database 
+Synchronous - If there is a error in one step it doesnt proceed further 
+In asynchronous it doesnt wait for one step to execute the other so we use asynchronous
+
+What is a callback function ?
+
+A function which executes after other function is executed.
+In JS functions are objects.
+Any function in JS that take function as a argument are called Higher Order Function.
+This callback function needs to wait till the other function is executed.
+Ex div.addEventListener("event",function())
+This function is called asynchronous
+
+Promise
+Used to handle async result of the operation.
+With promise we can defer execution of a code block till the async request is completed.
+
+Promise object is created using new keyword 
+It has two callbacks resolve and reject
+const promise = new Promise(function(resolve,reject){});
+
+A promise status can be :
+1)fulfilled  promise is a success
+2)rejected   promise failed
+3)pending     not executed 
+4)settled   either success or failed
+
+.catch(onRejected)  //When there a error 
+.then(onFulfilled,onRejected) //When it is fulfilled
+.finally(onFinally) //Executed anyways 
+
+
+Callbacks and Promises	are not the same
+Callbacks are function passed to another function as a  reference
+Chaining of Callbacks can be clumsy and lead to Callback Hell
+Promises use Callbacks and more elegant than Callbacks
+Chaining of Promises is supported
+
+
+
+

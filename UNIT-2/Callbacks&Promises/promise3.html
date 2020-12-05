@@ -1,0 +1,39 @@
+<script>
+    var promise = new Promise(function(resolve,reject){
+        var momSavings = 50000
+        var phonePrice = 60000
+        if(momSavings > phonePrice){
+            resolve({
+                "brand":"iPhone",
+                "model":"12"
+            })
+        }
+        else
+        {
+            reject("Sorry we will buy it next month");
+        }
+    })
+
+    promise.then(function(value){
+        console.log(JSON.stringify(value));
+        console.log(value.brand + " "+value.model);
+    })
+
+    promise.catch(function(value){
+        console.log(value);
+    })
+    
+    promise.finally(function(){
+        console.log("I love my mom regardless of whether she buys me a phone or not!")
+    })
+
+// If savings > price 
+//{"brand":"iPhone","model":"12"}
+// iPhone 12
+// love my mom regardless of whether she buys me a phone or not!
+
+// If savings < price 
+// sorry we will buy it next month
+// I love my mom regardless of whether she buys me a phone or not!
+
+</script>

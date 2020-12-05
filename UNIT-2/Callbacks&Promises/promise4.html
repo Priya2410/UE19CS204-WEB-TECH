@@ -1,0 +1,25 @@
+<script>
+    var date= new Promise(function(resolve,reject){
+        var weather = true;
+        if(weather){
+            details={
+                'name':'Cubana Restaurant',
+                'rating':'5.0',
+                'address':'HSR'
+            }
+            resolve(details);
+        }
+        else
+        {
+            reject('Sorry not possible its raining')
+        }
+    })
+    date.then(function(value){
+        console.log(JSON.stringify(value));
+        console.log("Yes we are going on a date");
+    })
+
+    date.catch(function(value){
+        console.log(value);
+    })
+</script>

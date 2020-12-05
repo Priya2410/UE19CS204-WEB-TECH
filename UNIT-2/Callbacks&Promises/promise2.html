@@ -1,0 +1,25 @@
+<script>
+    // if it is resolve .then will be called 
+    // if it is reject .catch will be called 
+    var promise = new Promise(function(resolve,reject){
+        resolve(2);
+    })
+    .then(first).then(second).then(third).then(function(response){
+        console.log(response)
+    })
+
+    function first(value)
+    {
+        return value+2;
+    }
+
+    function second(value)
+    {
+        return value+2;
+    }
+
+    function third(value)
+    {
+        return value+2;
+    }
+</script>
