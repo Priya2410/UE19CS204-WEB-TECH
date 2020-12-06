@@ -1,0 +1,19 @@
+<body>
+    <p>Click on the button to load result.html file:</p>
+    <div id = "stage">
+       STAGE
+    </div>  
+    <input type = "button" id = "driver" value = "Load Data" />
+    <script>
+        $(document).ready(function(){
+            $("input:button").on('click',function(event){
+                $.getJSON('sample.json',function(jd){
+                    //jd reference object for JSON data 
+                    $("#stage").innerHTML = "<p>"+jd.name+"</p>";
+                    $("#stage").append("<p>"+jd.salary+"</p>");
+                    $("#stage").append("<p>"+jd.gender+"</p>");
+                })
+            })
+        })
+    </script>
+</body>

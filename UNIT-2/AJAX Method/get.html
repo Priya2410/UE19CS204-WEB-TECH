@@ -1,0 +1,12 @@
+<body>
+    <script>
+        $(document).ready(function(){
+            $("button").on('click',function(){
+            $.get('/simple.txt',function(data,status){
+                console.log("data"+data+"status"+status);
+                // status is either success or failure 
+            })
+            });
+        })
+    </script>
+</body>

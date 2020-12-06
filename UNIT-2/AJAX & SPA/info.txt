@@ -1,1 +1,50 @@
 AJAX - asyncronous JS and XML 
+Helps in changing parts of the web page
+Allows web pages to be updated asyncronously
+Exchanges small amount of data with the server and updates the page 
+Used in google facebook youtube etc.
+The entire web page need not be loaded again and again.
+
+HTML Page -------------> AJAX (HTML send JS calls to AJAX) AJAX sends back updated data.
+HTML Page -------------> Initial Page request to the server
+AJAX ----> requests for data from the server so that it can update 
+
+Async communication - is done with AJAX 
+Async updates on user action 
+We use the XHR Object or XMLHttpRequest Object
+
+To create an XHR Object 
+-> var xhr = new XMLHttpRequest();
+
+XHR Object 
+API used by JS to transfer and mainpulate XML Data to and from the webserver 
+using HTTP establishing an individual and independent connection.
+
+XMLHttpMethods
+
+1) open(method , url)
+2) open(method , url , async parameter)
+3) open(method , url , username , password)
+
+Mandatory : method , url.
+
+Method : get , post , head 
+Async handles if the method should be async or not .
+send () used to send response .
+
+onreadystatechange() event that fires at every state change .
+
+readyState property defines the current state of the XMLHttpRequest object .
+readyState = 0 request not initialized after creating XHR but no open mathod
+readyState = 1 after open is called but not send 
+readyState = 2 after calling send 
+readyState = 3 after the browser establishes the connection with the server
+readyState = 4 after the request is completed by the browser
+
+Other properties of XHR Object :
+
+1) responseText returns response as a string 
+2) responseXML returns response as XML
+3) Status 200- OK , 404 - File not found , 403 - Forbidden , 500 - Internal server error
+4) statusText - returns status as string .
+

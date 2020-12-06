@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <div id="div1"></div>
+        <button>Click</button>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $("button").on("click",function(){
+                // If the url is successfully contacted by AJAX and then success callback function is called
+                $.ajax({url:'files/simple.txt',success:function(result){
+                    $("#div1").innerHTML = result;
+                }})
+            })
+        })
+    </script>
+</html>

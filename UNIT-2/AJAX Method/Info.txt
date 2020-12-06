@@ -1,0 +1,27 @@
+$.ajax
+$.get
+$.post
+$(elem).load
+
+$.ajax to perform ajax request
+$.ajax({name:value,name:value...})
+
+$.get(url,[data],[callback])
+(data and callback are optional)
+
+$.getJSON(url,[data],[callback])
+$.getScript(url,[data],[callback])
+
+$.post(url,[data],[callback],[type])
+(data is the data to be submitted to the server,type data type to be received by the user)
+
+$.(elem).load(url,data,callback) loads data from the server and returns the data to a specific element
+
+FETCH 
+= Ajax method
+= fetch returns a promise
+= has a flexible syntax
+fetch("https://www.google.com")
+= Promise doesnt reject http error it will only reject network error
+
+
