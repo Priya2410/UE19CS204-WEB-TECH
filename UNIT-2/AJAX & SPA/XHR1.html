@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <p id=demo>Let Ajax change the text</p>
+        <button onClick="loadDoc()">Change Content</button>
+        <script>
+            function loadDoc(){
+                var xhttp = new XMLHttpRequest() ; // New XHR Object
+                // here onreadystatechange is an event
+                xhttp.onreadystatechange=function(){
+                    // if the response has been received from the user
+                    // and status is 200 when OK
+                    if(this.readyState==4 && this.status==200)
+                    {
+                        document.getElementById('demo').innerHTML = this.responseText;
+                    }
+                }
+            }
+            xhttp.open("GET","files/simple.txt",true)
+            xhttp.send();
+        </script>
+    </body>
+</html>
