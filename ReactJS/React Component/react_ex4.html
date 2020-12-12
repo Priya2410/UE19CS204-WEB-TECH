@@ -1,0 +1,36 @@
+<script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+<script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+
+<div id="mydiv"></div>
+<style>
+    /* class selector */
+    .A{
+        color:red;
+    }
+    .B
+    {
+        background-color: orange;
+    }
+</style>
+
+<script type="text/babel">
+    class Student extends React.Component{
+        render()
+        {
+           // Similar to class
+            return(<div className={this.props.section}>
+                <h1>{this.props.children}</h1>
+                    </div> );
+        }
+    }
+
+    ReactDOM.render(<div>
+                    <Student section="A">
+                        <p>This is the child paragraph</p>
+                    </Student>
+                    <Student section="B">
+                        <p>This is the child paragraph</p>
+                    </Student>
+                    </div>,document.getElementById('mydiv'))
+</script>

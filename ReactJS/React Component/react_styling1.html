@@ -1,0 +1,28 @@
+<!-- Self learning Program wrt React Styling: https://www.kirupa.com/react/styling_in_react.htm  -->
+<script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+<script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+<body>
+<div id="myid"></div>
+<!-- Other way to include CSS styling -->
+<script type='text/babel'>
+class Student extends React.Component{
+    render()
+    {
+    const mystyle={
+        'color':'white',
+        'backgroundColor':'orange',
+        'textTransform':'uppercase',
+        'fontFamily':'monospace',
+        'padding':'10' // No need to mention unit
+    }
+
+    return (<div>
+        <h1 style={mystyle}> Hi look at me in style </h1>
+        <p>Hello I am without style</p></div>)
+    }
+
+}
+
+ReactDOM.render(<Student/>,document.getElementById('myid'));
+</script>

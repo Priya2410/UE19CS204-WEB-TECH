@@ -1,0 +1,20 @@
+<!--//It calls ReactDOM.render() every second from a setInterval() callback-->
+<html>
+  <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+  <body>
+    <div id="mydiv"></div>
+		<script type="text/babel">	
+		var dest=document.getElementById('mydiv');
+        function tick()
+         {
+			const element = (<div><h1>Hi, A and B section Folks!</h1><h2>It is {new Date().toString()}</h2></div>);
+		    ReactDOM.render(element, dest);
+         }
+
+setInterval(tick, 1000); 
+		</script>
+  </body>
+</html>

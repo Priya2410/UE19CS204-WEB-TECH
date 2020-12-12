@@ -1,0 +1,11 @@
+Components in React JS
+Part of the UI 
+Example header,footer,sidenav,navbar,main content
+All components come together to make the app.
+The components are reusable.
+
+Component in code placed in JS file like app.js or app.jsx 
+Component types :
+1) class components have a render method 
+2) function components
+

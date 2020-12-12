@@ -1,0 +1,53 @@
+<!--The CSS filter property provides access to effects like blur or color shifting on an element’s rendering before the element is displayed. Filters are commonly used to adjust the rendering of an image, a background, or a border.-->
+<html>
+	<head>
+		<title>React</title>
+		<script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+		<script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+		<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<div id="mydiv"></div>
+		<script type="text/babel">
+			class Square extends React.Component
+			{
+			render()
+				{
+				var squarestyle={height:150,
+				backgroundColor:this.props.bgcolor
+				};
+				return <div style={squarestyle}>
+						</div>
+				}
+			}
+			class Label extends React.Component
+			{
+			render()
+				{
+				var labelstyle={color:"navy",padding:10,textAlign:"center"};
+				return 	<p style={labelstyle}> {this.props.bgcolor}</p>
+						
+				}
+			}
+			class Card extends React.Component
+			{
+			render()
+				{
+				var cardstyle={ height:200,
+				width:150,
+				backgroundColor:"white",
+				filter: "drop-shadow(0px 0px 5px #666)"
+				};
+				return (<div style={cardstyle}>
+						<Square bgcolor={this.props.mycolor}/>
+						<Label bgcolor={this.props.mycolor}/>
+						</div>);
+				}
+			}
+ReactDOM.render(<div><Card mycolor="yellow"/></div>,document.querySelector("#mydiv"));
+		</script>
+	</body>
+</html>

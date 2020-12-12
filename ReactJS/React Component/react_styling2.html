@@ -1,0 +1,32 @@
+<script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+<script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+<body>
+    <div id="myid"></div>
+    <script type="text/babel">
+        class Letter extends React.Component{
+            render()
+            {
+                const mystyle={
+                    'backgroundColor': this.props.bgcolor,
+                    'fontSize':'30',
+                    'color':'white',
+                    'padding':'10',
+                    'margin':'10',
+                    'textAlign':'center',
+                    'display':'inline-block',
+                    'height':'100',
+                    'width':'100',
+                    'fontWeight':'bold'
+                }
+
+                return(<div style={mystyle}>{this.props.children}</div>);
+            }
+        }
+
+        ReactDOM.render(<div><Letter bgcolor="pink"><p>A</p></Letter>
+            <Letter bgcolor="orange"><p>B</p></Letter>
+            <Letter bgcolor="lightgreen"><p>C</p></Letter>
+            <Letter bgcolor="aqua"><p>D</p></Letter></div>,document.getElementById('myid'))
+    </script>
+</body>
