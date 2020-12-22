@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>React</title>
+		<script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+		<script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+		<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+	</head>
+	<body>
+    <div id="myid"></div>
+    <script type="text/babel">
+    class Quantity extends React.Component{
+        constructor(props)
+        {
+            super(props);
+            this.state={quantity:0};
+        }
+        incrementQuant(){
+            this.setState({quantity:this.state.quantity+1})
+        }
+        render()
+        {
+            alert("Rendered again") //Every time button is clicked rendering happens again and again
+            return(
+            <div><h1>{this.state.quantity}</h1><button onClick={this.incrementQuant.bind(this)}>+</button></div>)
+        }
+    }
+    ReactDOM.render(<div>Quantity:<Quantity/></div>,document.getElementById('myid'));
+    </script>

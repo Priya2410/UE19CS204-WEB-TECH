@@ -1,0 +1,36 @@
+React doesnt render duplicate keys
+Example :
+const arr=[1,2,3,4,2];
+<ul>
+    arr.map((num)=><li key={num}>{num}</li>);
+</ul>
+This gives a warning that two of the keys are same
+We cant have duplicate keys 
+The output is 
+<ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+</ul>
+
+Key is a unique indentifier.
+
+Example 2:
+var users=[{username:'bob'},{username:'sue'}] // Array of objects
+users.map((u,i)=><div key={i}>{u.username}</div>)
+//
+<div key="1">bob</div>
+<div key="2">sue</div>
+
+So here we add an element before bob
+like
+var users=[{username:'joe'},{username:'bob'},{username:'sue'}]
+So here 3 changes will take place according to react 
+bob->joe
+sue->bob
+new element sue is added
+
+Instead of this its better to have keys with "usernames" makes it less complex for react
+
+Here u is the object reference and i is the index so we are mapping users with key as index;

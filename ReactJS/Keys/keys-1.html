@@ -1,0 +1,25 @@
+<!-- Key property in React: Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array or the lists to give the elements a stable identity-->
+
+<html>
+	<head>
+		<title>React</title>
+		<script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+		<script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+		<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+	</head>
+	<body>
+    <div id="myid"></div>
+    <script type="text/babel">
+    function Myfunc(props)
+    {
+        var num=props.numbers; //Getting the num from the user 
+        var listitems=num.map((num=><li>{num}</li>)); // for every num create a list item and its key is also equal to num
+
+            return <ul>{listitems}</ul>
+    }
+    const numbers = [1, 2, 3, 4, 5];
+ReactDOM.render(<Myfunc numbers={numbers} />,document.getElementById('myid') //Gives us a warning while rendering since two components have the same key
+);
+  		</script>
+	</body>
+</html>
