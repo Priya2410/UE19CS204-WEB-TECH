@@ -1,0 +1,37 @@
+<!--React State: React components has a built-in state object. 
+The state object is where you store property values that belongs to the component.
+When the state object changes, the component re-renders.
+Creating the state Object: The state object is initialized in the constructor:The constructor is a method used to initialize an object's state in a class. It automatically called during the creation of an object in a class.
+-->
+<html>
+	<head>
+		<title>Complex Components</title>
+		<script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+		<script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+		<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+	</head>
+<body>
+    <div id="myid"></div>
+    <script type="text/babel">
+    class Car extends React.Component{
+    constructor(props)
+    {
+        super(props);
+        this.state={
+            brand:'Tata',
+            model:'Nano',
+            color:'white',
+            year:2018
+        }
+    }
+
+    render()
+    {
+        return(<div>
+            <h1>{this.state.brand}  {this.state.model}</h1>
+            <p> It is a {this.state.color} car from {this.state.year}</p>
+            </div>)
+    }
+}
+    ReactDOM.render(<Car/>,document.getElementById('myid'));
+    </script>

@@ -1,0 +1,9 @@
+To see changes based on what the user does/actions like click,keydown,keyup.
+Stateful components maintain state
+Constructor in React :
+-> Used to initialize the object state
+-> Automatically called during object creation
+Constructor(props)
+{
+    super(props);
+}

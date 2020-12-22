@@ -9,3 +9,17 @@ Component types :
 1) class components have a render method 
 2) function components
 
+Independent and reusable pieces of code.
+Class Component :
+1) Start with upper case 
+2) has to include extends React.Component
+3) Use the render() method to return html 
+
+The components can have properties.
+props helps you to fetch the properties from the given input 
+
+Whenever you give JS content in the render method we use {}
+
+
+
+

@@ -1,0 +1,32 @@
+<!-- Call is used for function borrowing 
+we can also pass argument to the function
+In apply the difference is that we pass an array of arguments rather than comma separated arguments -->
+
+<!-- bind is similar to Call
+Instead of sharing the same copy of the object1 function
+It has its own copy
+Suppose object2.bind then object2 is binded to the function getFullName() directly rather than sharing a copy -->
+
+<!-- objectname.functionname.call(object ref,arguments) -->
+<!-- objectname.functionname.apply(object ref,[arguments]) -->
+<!-- let newfunc= objectname.functionname.bind(reference,arguments) -->
+<!-- Here new func is the new copy of the previous function 
+which needs to be called separately -->
+<script>
+let name1={fname:'Priya',lname:'Mohata'
+,getFullName:function(a,b)
+{
+    console.log(this.fname+" "+this.lname+" "+(a+b));
+}
+};
+let name2={fname:'Parth',lname:'Mohata'};
+name1.getFullName.call(name2,2,3);  
+name1.getFullName.apply(name2,[4,5]);
+let new_func=name1.getFullName.bind(name2,2,8);
+new_func();
+</script>
+<!-- Parth Mohata 5
+call_apply_bind.html:19 Parth Mohata 9
+call_apply_bind.html:19 Parth Mohata 10 -->
+
+
