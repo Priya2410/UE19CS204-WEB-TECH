@@ -1,0 +1,32 @@
+<!-- Components without any state -->
+<html>
+	<head>
+		<title>React</title>
+		<script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+		<script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+        <style>
+            .shocking{
+                color:red;
+            }
+            .okay{
+                color:blue;
+            }
+        </style>
+    </head>
+	<body>
+        <div id="container"></div>
+        <!-- Here we use functional components instead of class components -->
+        <script type="text/babel">
+            function Helloworld(props)
+            {
+                return (<div className={props.type}>
+                    <h1>{props.children}</h1>
+                    </div>)
+            }
+            ReactDOM.render(<div><Helloworld type="shocking">
+                <p>Batman</p></Helloworld><Helloworld type="okay">
+                    This is not okay</Helloworld></div>,document.getElementById('container'))
+        </script>
+        </body>
+        </html>

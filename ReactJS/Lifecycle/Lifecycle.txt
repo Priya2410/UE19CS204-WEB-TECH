@@ -1,0 +1,43 @@
+React Component goes through several stages in its lifecycle
+Lifecycle Methods dont exist on functional components
+There are four phases in lifecycle methods 
+1) Mounting  // When the component is created and inserted 
+2) Updating  // When the component is re rendered due to a change
+3) Unmounting // When a component is removed
+4) Error Handling // When there is a problem in adding the component or in the constructor 
+
+componentDidMount() => ensures that the component is properly mounted
+componentDidUpdate() => When there is a change in the component after re rendering again DOM must be manipulated
+To check if it has been re rendered properly we use componentDidUpdate
+componentWillUnmount()
+componentDidCatch()
+
+React works on the virtualDOM 
+The react after rendering will update the DOM 
+
+Every component in react goes through the lifecycle methods:
+1) Mounting birth of the component
+2) Updating growth of the component
+3) Unmounting death of the component
+
+Method 
+1) Render() returns an HTML
++ Most used lifecycle method
++ Handles rendering of the component
++ Happens during mounting and Updating
++ We cant manipulate the component state using render()
+
+2) componentDidMount()
++ called as soon as the component is rendered
++ best time to initiate the API calls
++ best time to get the data
++ we can manipulate the state of the component here using setState()
+
+3) componentDidUpdate()
++ when there is a update in the component
++ used to update the DOM
+
+4) componentWillUnmount()
++called when the component is removed from the DOM
++setState() and render() cant be used here 
+

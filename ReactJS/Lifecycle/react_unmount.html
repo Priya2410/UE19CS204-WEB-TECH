@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+		<script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+		<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+	</head>
+<body>
+<div id="myid"> </div>
+<script type="text/babel">
+    class Container extends React.Component{
+        constructor(props)
+        {
+            super(props);
+            this.state={show:true};
+        }
+        delHeader()
+        {
+            this.setState({show:false});
+        }
+        render()
+        {
+            var myheader;
+            if(this.state.show){
+                myheader=<Child/>
+            }
+            return <div>{myheader}<button onClick={this.delHeader.bind(this)}>Delete Header</button></div>
+        }
+    }
+
+    class Child extends React.Component{
+        componentWillUnmount(){ //Automatically called when show is false
+            alert('H1 is being deleted!!')
+        }
+        render()
+        {
+            return <h1>Hello World</h1>
+        }
+    }
+
+    ReactDOM.render(<Container/>,document.getElementById('myid'));
+    </script>
+    </body>
+    </html>
+<!--    
+    THIS PROGRAM BASICALLY WHEN SHOW IS TRUE CHILD IS RENDERED ELSE NOTHING IS RENDERED AND TO 
+    CHECK HOW THE PREVIOUS ELEMENT IS REMOVED -->
