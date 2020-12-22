@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>React</title>
+		<script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+		<script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+		<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+		<style>
+		</style>
+	</head>
+	<body>
+        <div id="container"></div>
+        <script type="text/babel">
+            class Example extends React.Component
+            {
+                shoot()
+                {
+                    alert("Hi I am dead");
+                    alert(this); // its undefined
+                }
+                render()
+                {
+                    return (<button onClick={this.shoot}>Shoot Me</button>)
+                }
+            }
+            ReactDOM.render(<Example/>,document.getElementById('container'))
+        </script>

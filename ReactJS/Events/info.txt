@@ -1,0 +1,19 @@
+React events are similar to JS 
+All events are written in camel case syntax
+onClick
+React Event handlers are in the brackets 
+onClick={func};
+(like for JS onclick="func()")
+
+Synthetic events - has additional information 
+Wrapper around the DOMEventObject
+No addEventListener method
+event.preventDefault() to prevent the default behaviour of the preventDefault
+event.stopPropagation() to stop bubbling and capture phases
+
+Event Pooling 
+Synthetic Event Object is reused
+Basically after the event is used then all the properties are nullified
+To stop this nullification you can stop it by event.persist
+
+Focus,blur dont bubble

@@ -7,3 +7,15 @@ Constructor(props)
 {
     super(props);
 }
+If you dont call super(props) it leads to undefined properties.
+Whenever we use a constructor we have to always call super(props).
+
+Constructors are used to initialize the local state of the component using this.state
+This is used to bind the event handler methods 
+this.state is used to set an state
+and setState() to change the state.
+
+React has an in built state object 
+This state object is used to hold the property values of a component
+Whenever the state of the object changes the component re renders --- ex Gmail
+The state is initialized in the constructor

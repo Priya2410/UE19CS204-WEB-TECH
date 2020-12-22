@@ -1,0 +1,35 @@
+<!--By default React Events Always Bubble:except focus, blur, and change events-->
+<script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+<script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+
+<body>
+<div id="myid"> </div>
+<script type='text/babel'>
+function App() {
+    //Capture Phase
+  return (
+    <div
+      style={{ background: "yellow", padding: "50px" }}
+      onClickCapture={() => console.log("captured yellow")}
+    >
+      <div
+        style={{ background: "blue", padding: "50px" }}
+        onClickCapture={() => console.log("captured blue")}
+      >
+        <div
+          style={{ background: "green", padding: "50px" }}
+          onClickCapture={() => console.log("captured green")}
+        >
+          <div
+            style={{ background: "purple", padding: "50px" }}
+            onClickCapture={() => console.log("captured purple")}
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+ReactDOM.render(<App/>,document.getElementById("myid"));
+
+</script>

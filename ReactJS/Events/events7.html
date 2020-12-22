@@ -1,0 +1,35 @@
+<!-- refs is used to keep the reference of the element and access it directly with reference -->
+<script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+<script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+<script type='text/babel'>
+var colors = ['red', 'purple', 'green', 'blue', 'yellow']
+class CustomText extends React.Component{
+    constructor(props)
+    {
+        super(props);
+        this.textpara=null;
+        this.setref=(element)=>
+        {
+            this.textpara=element;
+        }
+    }
+    changeText = (event)=>{
+        event.persist();
+        console.log(event.type);
+        console.log(event.target);
+        var num= Math.floor(Math.random()*5)
+        this.textpara.innerHTML=colors[num];
+        this.textpara.style.color=colors[num];
+        event.preventDefault();
+    }
+    render()
+    {
+        return(
+            <div>
+                <h1 ref={this.setref}>Original No color</h1>
+                <button onClick={this.changeText}>Change Text</button></div>
+        )
+    }
+}
+ReactDOM.render(<CustomText/>,document.body)
