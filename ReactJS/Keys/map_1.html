@@ -1,0 +1,22 @@
+<!--The map() method creates a new array with the results of calling a function for every array element.
+
+The map() method calls the provided function once for each element in an array, in order.-->
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to get the square root of each element in the array.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+    var numbers=[1,4,9,16];
+    function myFunction(){
+    var x=document.getElementById('demo');
+    x.innerHTML=numbers.map(Math.sqrt); // applies math.sqrt to every element and creates a new array
+    }
+</script>
+</body>
+</html>

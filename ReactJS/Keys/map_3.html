@@ -1,0 +1,19 @@
+<!--Arrow function -JavaScript arrow functions are anonymous functions
+//no params, empty body
+1. () => {}; is equal to a regular  function function(){}
+2. x => x; is is equal to a regular function function(x){ return x; }
+3. x => x + 5; is is equal to a regular function function(x){ return x + 5; }-->
+
+<script>
+const numbers = [1, 2, 3, 4, 5];
+// const doubled=numbers.map((num)=>{return num*2});
+// console.log(doubled)
+
+function doubling(num)
+{
+    return num*2;
+}
+const doubled=numbers.map(doubling);
+console.log(doubled);
+
+</script>
