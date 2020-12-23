@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+		<script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+		<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+	</head>
+<body>
+<div id="myid"> </div>
+<script type="text/babel">
+    class Counter extends React.Component{
+        constructor(props){
+            super(props);
+            this.state={time:0};
+        }
+        timer=()=>{
+            this.setState({time:this.state.time+1});
+        }
+        componentDidMount()
+        {
+            this.obj=setInterval(this.timer,1000);
+        }
+        componentDidUpdate()
+        {
+            console.log("Updated");
+        }
+        componentWillUnmount()
+        {
+            clearInterval(this.obj);
+            console.log("cleared");
+        }
+        render()
+        {
+            return <div>{this.state.time}<h1>Seconds spent here</h1></div>
+        }
+    }
+    ReactDOM.render(<Counter/>,document.getElementById('myid'));
+    </script>
+    </body>
+    </html>

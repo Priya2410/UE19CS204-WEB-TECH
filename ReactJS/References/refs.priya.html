@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+		<script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+		<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+	</head>
+<body>
+<div id="myid"> </div>
+
+<script type="text/babel">
+var colors=['red','blue','green','orange','pink'];
+    class Example extends React.Component{
+        constructor(props){
+            super(props);
+            this.setRef=(element)=>{this.ele=element};
+        }
+        changeColor=()=>
+        {
+            var i=Math.floor(((Math.random()*100)%5))
+            this.ele.innerHTML=colors[i];
+            this.ele.style.color=colors[i];
+        }
+        render()
+        {
+            return <div><h1 ref={this.setRef}>This is the original Text</h1><input type="button" onClick={this.changeColor} value="changeMe"></input></div>
+        }
+    }
+    ReactDOM.render(<Example/>,document.getElementById('myid'));
+</script>
+</body>
+</html>

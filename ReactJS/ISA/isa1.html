@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+		<script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+		<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+	</head>
+<body>
+<div id="myid"> </div>
+<script type="text/babel">
+    class App extends React.Component{
+        constructor(props){
+            super(props);
+            this.state={
+                height:200,
+                width:300
+            }
+            this.setref=(element)=>{
+                this.ele=element;
+            }
+        }
+        zoomIn=()=>
+        {
+            this.ele.height+=10;
+            this.ele.width+=10;
+        }
+        zoomOut=()=>
+        {
+            this.ele.height-=10;
+            this.ele.width-=10;
+        }
+        render()
+        {
+            return <div><img ref={this.setref} src={this.props.src} width={this.width} height={this.height}></img>
+                <button onClick={this.zoomIn}>ZoomIn</button>
+                <button onClick={this.zoomOut}>ZoomOut</button>
+                </div>
+        }
+    }
+    ReactDOM.render(<App src="../priya.jpeg"/>,document.getElementById('myid'));
+    </script>
+    </body>
+    </html>
