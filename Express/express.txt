@@ -94,4 +94,9 @@ app.METHOD(Path,Handler)
 here Method can be get,post,put,update,delete
 Path is the route to the server web page.
 Handler is executed when the route is found
+A route can have more than one handler too.
+
+Cookies are stored on the client side,are used for session management,user management(new user or old user)
+response.cookie(name,value,{maxAge:5000,expiresIn:500000+Date.now()});
+
 
